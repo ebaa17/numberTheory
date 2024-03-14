@@ -50,6 +50,39 @@ ul {
     width: 1170px;
   }
 }
+.main-title {
+  margin: 100px auto;
+  /* border: 2px solid black; */
+  padding: 10px 20px;
+  font-size: 30px;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+  transition: var(--main-transition-duration);
+}
+.main-title::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary);
+  position: absolute;
+  border-radius: 50%;
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main-title::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary);
+  position: absolute;
+  border-radius: 50%;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 /* end global rules */
 
 /* Start header */
