@@ -51,6 +51,15 @@ button{
         font-size: 20px;
         
 }
-span{
+.forget{
         display: block;
+        width: 90%;
+        margin-bottom: 20px;
+        text-decoration: underline;
+        letter-spacing: 1px;
+
+}
+.forget:hover{
+        color: rgb(189, 16, 16);
+        cursor: pointer;
 }
