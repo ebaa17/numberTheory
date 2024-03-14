@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Online Library Cart</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="OIP.jpeg">
+        <meta property="og:url" content="#">
+        <meta property="og:description" content="Explore our online library cart to add your favorite books.">
+        <meta property="og:locale" content="en-US">
+        <meta property="og:site_name" content="Chapterfly">
+        
+        <link rel="icon" href="">
+    </head>
+    <body>
+        <div class="main-container container">
+            <div class="row">
+                <!-- ::before -->
+                <form action="checkout" method="post">
+                    <input type="hidden" name="_token">
+                    <div id="content" class="">
+                        <h2 class="title">Books Cart</h2>
+                        <div class="table-responsive">
+                            <!-- Cart items will be dynamically added here -->
+                            <p>Your books cart is empty!</p>
+                        </div>
+                        <div class="row">
+                            <!-- ::before -->
+                            <div class="">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-right">
+                                                <strong>Count items:</strong>
+                                            </td>
+                                            <td class="text-right">
+                                                <span id="cart_number">0</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-right">
+                                                <strong>Total:</strong>
+                                            </td>
+                                            <td class="text-right">
+                                                <span id="cart_price">0 LE</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- ::after -->
+                        </div>
+                        <div class="buttons" id="footer_cart">
+                            <div class="pull-left">
+                                <a href="home" class="btn">Back to Home</a>
+                            </div>
+                            <div class="pull-right">
+                                <input type="submit" value="Checkout" class="btn-checkout">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!-- ::after -->
+            </div>
+                <!-- ::after -->
+        </div>
+        
+    </body>
+</html>
