@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Programming Books</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="">
+        <meta property="og:description" content="Discover a rich collection of programming books in our online library. Explore topics ranging from algorithms to web development. Start your learning journey today!">
+        <meta property="og:locale" content="en-US">
+        <meta property="og:site_name" content="Chapterfly">
+        
+        <link rel="icon" href="">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Programming Books</h1>
+        <!-- Add new book -->
+        <a href="add_book.html">Add New Book</a>
+        <h2>Available Books</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Book Name</th>
+                    <th>Author</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- books items will be dynamically added here -->
+                <tr>
+                    <td>1</td>
+                    <td>Clean Code</td>
+                    <td>Robert C. Martin</td>
+                    <td>Programming</td>
+                    <td>A Handbook of Agile Software Craftsmanship</td>
+                    <td>
+                        <button onclick="editBook(1)">Edit</button>
+                        <button onclick="deleteBook(1)">Delete</button>
+                        <button onclick="borrowBook(1)">Borrow</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>The Mythical Man-Month</td>
+                    <td>Frederick Brooks</td>
+                    <td>Programming</td>
+                    <td>Delves into software development, project management, and the challenges faced in the field.</td>
+                    <td>
+                        <button onclick="editBook(2)">Edit</button>
+                        <button onclick="deleteBook(2)">Delete</button>
+                        <button onclick="borrowBook(2)">Borrow</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>The Pragmatic Programmer</td>
+                    <td>Andrew Hunt and David Thomas</td>
+                    <td>Programming</td>
+                    <td>Offers pragmatic tips to improve your programming and development process.</td>
+                    <td>
+                        <button onclick="editBook(3)">Edit</button>
+                        <button onclick="deleteBook(3)">Delete</button>
+                        <button onclick="borrowBook(3)">Borrow</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Code Complete</td>
+                    <td>Steve McConnell</td>
+                    <td>Programming</td>
+                    <td>A Practical Handbook of Software Construction.</td>
+                    <td>
+                        <button onclick="editBook(4)">Edit</button>
+                        <button onclick="deleteBook(4)">Delete</button>
+                        <button onclick="borrowBook(4)">Borrow</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>The Art of Computer Programming</td>
+                    <td>Donald Knuth</td>
+                    <td>Programming</td>
+                    <td>It presents programming algorithms and their analysis.</td>
+                    <td>
+                        <button onclick="editBook(5)">Edit</button>
+                        <button onclick="deleteBook(5)">Delete</button>
+                        <button onclick="borrowBook(5)">Borrow</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Introduction to Python</td>
+                    <td>John Doe</td>
+                    <td>Programming</td>
+                    <td>A beginner's guide to Python programming.</td>
+                    <td>
+                        <button onclick="editBook(6)">Edit</button>
+                        <button onclick="deleteBook(6)">Delete</button>
+                        <button onclick="borrowBook(6)">Borrow</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Design Patterns</td>
+                    <td>Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides</td>
+                    <td>Programming</td>
+                    <td>Introduces fundamental design patterns that enhance code reusability and maintainability.</td>
+                    <td>
+                        <button onclick="editBook(7)">Edit</button>
+                        <button onclick="deleteBook(7)">Delete</button>
+                        <button onclick="borrowBook(7)">Borrow</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    
+    </body>
+</html>
+
+<!--
+    Add new books
+        (Books includes ID, book name, author, category, description) : done
+    View list of available books. : done
+    Select a book and edit its details. : later by js
+    Delete a book : later by js
+-->
