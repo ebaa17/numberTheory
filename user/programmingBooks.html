@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Programming Books</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="">
+        <meta property="og:description" content="Discover a rich collection of programming books in our online library. Explore topics ranging from algorithms to web development. Start your learning journey today!">
+        <meta property="og:locale" content="en-US">
+        <meta property="og:site_name" content="Chapterfly">
+        
+        <link rel="icon" href="">
+        <style>
+            .available {
+                color: green;
+            }
+            .borrowed, Not-available {
+                color: black;
+            }
+            .Not-available {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Search books -->
+        <search>
+            <!-- <form action="" method=""> -->
+            <!-- <label for="searchInput">Search:</label> -->
+            <input type="text" id="searchInput" placeholder="Search by title, author, or category">
+            <button onclick="searchBooks()">Search</button>
+            <!-- </form> -->
+        </search>
+
+        <h1>Programming Books</h1>
+
+            
+        <!-- Available Books List -->
+        <h2>Available Books</h2>
+        <div class="intro">Here are some highly recommended programming books that can enhance your skills, deepen your understanding, and make you a better programmer:</div>
+        <ul>
+            <li class="available">Clean Code (Available)</li>
+            <li class="available">The Pragmatic Programmer (Available)</li>
+            <li class="available">The Mythical Man-Month (Available)</li>
+            <li class="available">The Art of Computer Programming (Available)</li>
+            <li class="borrowed">Code Complete (borrowed)</li>
+            <li class="borrowed">Design Patterns (borrowed)</li>
+            <li class="Not-available">MICROSOFT SQL SERVER A BEGINNER'S GUID (Not Available)</li>
+            <li class="Not-available">Head frist object oriented Analysis and design (Not Available)</li>
+        </ul>
+        <div class="conclusion">These books cover a range of topics from writing clean code to understanding algorithms and software construction. They are not just about mastering a particular language but also about becoming a better problem solver and programmer overall. Happy reading! 📚</div>
+
+
+        <!-- Book Details Page -->
+        <h2>Book Details</h2>
+        <p>Select a book to view its details:</p>
+        <a href="Programming Books/cleanCode.html">Clean Code</a>
+        <a href="Programming Books/The Pragmatic Programmer.html">The Pragmatic Programmer</a>
+        <a href="Programming Books/The Mythical Man-Month.html">The Mythical Man-Month</a>
+        <a href="Programming Books/The Art of Computer Programming.html">The Art of Computer Programming</a>
+        <a href="Programming Books/Code Complete.html">Code Complete</a>
+        <a href="Programming Books/Design Patterns.html">Design Patterns</a>
+        <!-- more book links will be dynamically added -->
+        
+        <!-- Borrow Book -->
+        <h2>Book Borrowing</h2>
+        <a href="borrow.html">Borrow a Book</a>
+    </body>
+</html>
+
+
+
+
+<!--
+    Search for books by titles or author or category and results are displayed accordingly. : done
+    View list of available books marked either available or not available in case it is borrowed by a user. : done
+    Select a book and view its details in a book page. : done
+    Borrow a book (only applicable in case a book is available). : done
+    View list of borrowed books for that user. : done
+-->
