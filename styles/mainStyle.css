@@ -59,35 +59,49 @@ ul {
   }
 }
 .main-title {
-  margin: 100px auto;
+  margin: 0 auto 20px;
   padding: 10px 20px;
   font-size: 30px;
   width: fit-content;
   position: relative;
   z-index: 1;
-  transition: var(--main-transition-duration);
+  transition: 0.4 0.3 ease-in;
+  border: 3px solid var(--primary);
+}
+.main-title:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 .main-title::before {
   content: "";
-  width: 12px;
-  height: 12px;
-  background-color: var(--primary);
+  width: 15px;
+  height: 15px;
+  background-color: var(--accent);
   position: absolute;
   border-radius: 50%;
-  left: -6px;
+  left: -25px;
   top: 50%;
   transform: translateY(-50%);
+  transition: var(--main-transition-duration);
 }
 .main-title::after {
   content: "";
-  width: 12px;
-  height: 12px;
-  background-color: var(--primary);
+  width: 15px;
+  height: 15px;
+  background-color: var(--accent);
   position: absolute;
   border-radius: 50%;
-  right: -6px;
+  right: -25px;
   top: 50%;
   transform: translateY(-50%);
+  transition: var(--main-transition-duration);
+}
+.main-title:hover::before {
+  left: 1px;
+}
+.main-title:hover::after {
+  right: 1px;
 }
 
 /* end global rules */
@@ -122,7 +136,7 @@ ul {
   transition: var(--main-transition-duration);
 }
 .header .logo:hover {
-  color:var(--secondary);
+  color: var(--secondary);
 }
 .header .main-nav {
   display: flex;
@@ -265,3 +279,57 @@ ul {
   max-width: 100%;
 }
 /* End Landing */
+
+/* Start Featured books */
+/* .featured {
+} */
+.featured .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.featured .box {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform var(--main-transition-duration),
+    box-shadow var(--main-transition-duration);
+}
+.featured .box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+.featured .box img {
+  width: 100%;
+  max-width: 100%;
+}
+.featured .box .content {
+  padding: 20px;
+}
+.featured .box .content h3 {
+  margin: 0;
+  text-align: center;
+}
+.featured .box .content p {
+  margin: 5px 10px;
+  line-height: 1.9;
+  letter-spacing: 1px;
+  color: #777;
+}
+.featured .box .info { 
+  padding: 20px;
+  border-top: 2px solid #e6e6e7;
+  background-color: var(--bgcolor  );
+}
+.featured .box .info a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  color: var(--primary);
+  font-weight: bold;
+}
+.featured .box .info i {
+  font-size: 20px;
+}
+/* End Featured books */
