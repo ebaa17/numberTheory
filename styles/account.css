@@ -1,3 +1,16 @@
+#profileBody{
+    background-color: rgb(210, 228, 228);
+    padding: 50px;
+}
+#profilePic{
+    alt:"Profile picture";
+    width:50px;
+    height:50px;
+}
+
+table{
+    align-content: space-between;
+}
 td{
     padding: 20px;
 }
