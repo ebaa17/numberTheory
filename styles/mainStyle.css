@@ -1,11 +1,12 @@
 /* 
   Nav bar (done)
   Header (done)
-  Featured books
-  call to action
-  benefits
+  Featured books (done)
+  call to action (done)
+  benefits (done)
   Testimonials
   call to action
+  footer
 */
 
 /* Start global rules */
@@ -14,7 +15,9 @@
   /* Option one */
   --primary: #333a73;
   --secondary: #378ce7;
-  --accent: #67c6e3;
+  --accent1: #67c6e3;
+  --accent2: #f9f2e7;
+  --accent3: #f08080;
   --bgcolor: #effafc;
 
   --main-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
@@ -71,15 +74,15 @@ ul {
   border: 3px solid var(--primary);
 }
 .main-title:hover {
-  background-color: var(--accent);
-  border-color: var(--accent);
+  background-color: var(--accent1);
+  border-color: var(--accent1);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 .main-title::before {
   content: "";
   width: 15px;
   height: 15px;
-  background-color: var(--accent);
+  background-color: var(--accent1);
   position: absolute;
   border-radius: 50%;
   left: -25px;
@@ -91,7 +94,7 @@ ul {
   content: "";
   width: 15px;
   height: 15px;
-  background-color: var(--accent);
+  background-color: var(--accent1);
   position: absolute;
   border-radius: 50%;
   right: -25px;
@@ -345,7 +348,7 @@ ul {
     to top,
     var(--primary),
     var(--secondary),
-    var(--accent)
+    var(--accent1)
   );
   color: white;
   min-height: 100vh;
@@ -361,7 +364,7 @@ ul {
   border-bottom: 2px solid var(--bgcolor);
 }
 
-.main-cta .container .name i{
+.main-cta .container .name i {
   margin-right: 30px;
   transition: 0.3s ease-out;
 }
@@ -373,7 +376,7 @@ ul {
 .main-cta .container p {
   color: #e6e6e7;
   font-size: 20px;
-  margin-top:0;
+  margin-top: 0;
 }
 .main-cta .container .cta-buttons {
   color: white;
@@ -387,7 +390,7 @@ ul {
   padding: 5px 30px;
   transition: var(--main-transition-duration);
   background-color: var(--bgcolor);
-  color: var(--primary)
+  color: var(--primary);
 }
 .main-cta .container .primary-button:hover {
   transform: translateY(-10px);
@@ -401,5 +404,96 @@ ul {
 .main-cta .container .secondary-button:hover {
   color: var(--white);
 }
-
 /* End CTA */
+
+/* Start Benefits */
+.benefits {
+  background-color: white;
+  position: relative;
+  height: 100vh;
+  margin-bottom: 50px;
+}
+.benefits .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.benefits .container .box {
+  text-align: center;
+  border: 1px solid #ccc;
+}
+.benefits .container .box .img-holder {
+  position: relative;
+  overflow: hidden;
+}
+.benefits .container .box .img-holder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.benefits .container .box .img-holder::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-width: 0px 0px 170px 500px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+  transition: var(--main-transition-duration);
+}
+.benefits .box:hover .img-holder::after {
+  border-width: 170px 500px 170px 0px;
+}
+.benefits .container .box .img-holder img {
+  max-width: 100%;
+}
+.benefits .box h2 {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+.benefits .box h2::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 30px);
+  height: 3px;
+  background-color: red;
+  bottom: -20px;
+  left: 15px;
+  transition: var(--main-transition-duration);
+}
+.benefits .box:hover h2::before {
+  bottom: -5px;
+  height: 6px;
+}
+.benefits .box p {
+  line-height: 2;
+  font-size: 20px;
+  padding: 21px;
+  margin: 30px 0;
+}
+.benefits .money .img-holder::before {
+  background-color: var(--accent1);
+  opacity: 0.5;
+}
+.benefits .money h2::before {
+  background-color: var(--accent1);
+}
+.benefits .rare .img-holder::before {
+  background-color: var(--accent3);
+  opacity: 0.5;
+}
+.benefits .rare h2::before {
+  background-color: var(--accent3);
+}
+.benefits .community .img-holder::before {
+  background-color: var(--accent2);
+  opacity: 0.5;
+}
+.benefits .community h2::before {
+  background-color: var(--accent2);
+}
+/* End Benefits */
