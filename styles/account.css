@@ -1,7 +1,9 @@
 #profileBody{
-    background-color: rgb(210, 228, 228);
-    padding: 50px;
+    padding: 0;
 }
+/* #userProfile{
+    background-color:#e6e6e7;
+} */
 #profilePic{
     alt:"Profile picture";
     width:50px;
