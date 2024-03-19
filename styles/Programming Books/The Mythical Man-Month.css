@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.book-details {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the book image */
+.book-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Style the book title */
+h1 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+/* Style the book description */
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Style the list of ideas presented */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Style the price and buttons */
+.price, button {
+    margin-top: 10px;
+}
+
+/* Style the "Read more" link */
+a {
+    color: #0077B5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hover effect for the "Read more" link */
+a:hover {
+    text-decoration: underline;
+}
