@@ -10,31 +10,77 @@
         <meta property="og:description" content="Discover a rich collection of programming books in our online library. Explore topics ranging from algorithms to web development. Start your learning journey today!">
         <meta property="og:locale" content="en-US">
         <meta property="og:site_name" content="Chapterfly">
-        
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+        rel="stylesheet"
+        />
+
+        <!-- Style sheet -->
+        <link rel="stylesheet" href="../styles/mainStyle.css" />
+        <link rel="stylesheet" href="../styles/all.min.css" />
+        <link rel="stylesheet" href="../styles/Admin_programmingBooks.css">
         <link rel="icon" href="">
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-            }
-            table {
-                border-collapse: collapse;
-                width: 100%;
-            }
-            th, td {
-                border: 1px solid #ddd;
-                padding: 8px;
-                text-align: left;
-            }
-            th {
-                background-color: #f2f2f2;
-            }
-        </style>
     </head>
     <body>
-        <h1>Programming Books</h1>
-        <!-- Add new book -->
-        <a href="add_book.html">Add New Book</a>
-        <h2>Available Books</h2>
+        <!-- Start Header -->
+        <div class="header" id="header">
+            <div class="container">
+                <a href="main.html" class="logo"><i class="fa-solid fa-book-open icon"></i> Chapterfly</a>
+
+                <ul class="main-nav">
+                    <li><a href="#about">About us</a></li>
+                    <li><a href="#how">How it works</a></li>
+                    <li><a href="#contact">Contact us</a></li>
+                    <li><a href="accountUser.html">Account</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">Signup</a></li>
+                    <li><a href="cart.html">My cart</a></li>
+                    <li>
+                    <a href="#discover" class="discover">Discover</a>
+                    <!-- Start drop down menu -->
+                    <div class="mega-menu">
+                        <div class="image">
+                        <img src="../images/discoverImage.png" alt=""/>
+                        </div>
+        
+                        <ul class="links">
+                        <li><a href="">Programming</a></li>
+                        <li><a href="">Fantasy</a></li>
+                        <li><a href="">Comedy</a></li>
+                        <li><a href="">Biography</a></li>
+                        <li><a href="">Science</a></li>
+                        </ul>
+                        <ul class="links">
+                        <li><a href="">Historiy</a></li>
+                        <li><a href="">Novels</a></li>
+                        <li><a href="">Adventure</a></li>
+                        <li><a href="">Culture</a></li>
+                        <li><a href="">Mystery</a></li>
+                        </ul>
+                    </div>
+                    <!-- end drop down menu -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Header -->
+        <div class="landing">
+            <div class="container">
+                <div class="text">
+                    <h1>Programming Books</h1>
+                    <p>
+                        Discover a rich collection of programming books in our online library. Explore topics ranging from algorithms to web development. Start your learning journey today!
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="../images/laptop-with-bright-screen-mountains-books.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+        <h2 class="main-title">Available Books</h2>
         <table>
             <thead>
                 <tr>
@@ -55,9 +101,8 @@
                     <td>Programming</td>
                     <td>A Handbook of Agile Software Craftsmanship</td>
                     <td>
-                        <button onclick="editBook(1)">Edit</button>
-                        <button onclick="deleteBook(1)">Delete</button>
-                        <button onclick="borrowBook(1)">Borrow</button>
+                        <button onclick="editBook(1)" class="edit">Edit</button>
+                        <button onclick="deleteBook(1)" class="delete">Delete</button>
                     </td>
                 </tr>
                 <tr>
@@ -67,9 +112,8 @@
                     <td>Programming</td>
                     <td>Delves into software development, project management, and the challenges faced in the field.</td>
                     <td>
-                        <button onclick="editBook(2)">Edit</button>
-                        <button onclick="deleteBook(2)">Delete</button>
-                        <button onclick="borrowBook(2)">Borrow</button>
+                        <button onclick="editBook(2)" class="edit">Edit</button>
+                        <button onclick="deleteBook(2)"class="delete">Delete</button>
                     </td>
                 </tr>
                 <tr>
@@ -79,9 +123,8 @@
                     <td>Programming</td>
                     <td>Offers pragmatic tips to improve your programming and development process.</td>
                     <td>
-                        <button onclick="editBook(3)">Edit</button>
-                        <button onclick="deleteBook(3)">Delete</button>
-                        <button onclick="borrowBook(3)">Borrow</button>
+                        <button onclick="editBook(3)" class="edit">Edit</button>
+                        <button onclick="deleteBook(3)"class="delete">Delete</button>
                     </td>
                 </tr>
                 <tr>
@@ -91,9 +134,8 @@
                     <td>Programming</td>
                     <td>A Practical Handbook of Software Construction.</td>
                     <td>
-                        <button onclick="editBook(4)">Edit</button>
-                        <button onclick="deleteBook(4)">Delete</button>
-                        <button onclick="borrowBook(4)">Borrow</button>
+                        <button onclick="editBook(4)" class="edit">Edit</button>
+                        <button onclick="deleteBook(4)"class="delete">Delete</button>
                     </td>
                 </tr>
                 <tr>
@@ -103,9 +145,8 @@
                     <td>Programming</td>
                     <td>It presents programming algorithms and their analysis.</td>
                     <td>
-                        <button onclick="editBook(5)">Edit</button>
-                        <button onclick="deleteBook(5)">Delete</button>
-                        <button onclick="borrowBook(5)">Borrow</button>
+                        <button onclick="editBook(5)" class="edit">Edit</button>
+                        <button onclick="deleteBook(5)"class="delete">Delete</button>
                     </td>
                 </tr>
                 <tr>
@@ -115,9 +156,8 @@
                     <td>Programming</td>
                     <td>A beginner's guide to Python programming.</td>
                     <td>
-                        <button onclick="editBook(6)">Edit</button>
-                        <button onclick="deleteBook(6)">Delete</button>
-                        <button onclick="borrowBook(6)">Borrow</button>
+                        <button onclick="editBook(6)" class="edit">Edit</button>
+                        <button onclick="deleteBook(6)"class="delete">Delete</button>
                     </td>
                 </tr>
                 <tr>
@@ -127,14 +167,66 @@
                     <td>Programming</td>
                     <td>Introduces fundamental design patterns that enhance code reusability and maintainability.</td>
                     <td>
-                        <button onclick="editBook(7)">Edit</button>
-                        <button onclick="deleteBook(7)">Delete</button>
-                        <button onclick="borrowBook(7)">Borrow</button>
+                        <button onclick="editBook(7)" class="edit">Edit</button>
+                        <button onclick="deleteBook(7)"class="delete">Delete</button>
                     </td>
                 </tr>
             </tbody>
         </table>
-    
+        <br>
+        <!-- Add new book -->
+        <div class="addingBook">
+            <h2 class="main-title">Adding Book</h2>
+            <div class="container">
+                <h2>Ready to add a new book to our library?</h>
+                <p>
+                    Join our community and start adding books with ease!
+                </p>
+                <a href="add_book.html">Add New Book</a>
+            </div>
+        </div>
+        <!-- Start Footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="box">
+                    <h3>Chapterfly</h3>
+                    <ul class="social">
+                    <li>
+                        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    </ul>
+                    <p class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Necessitatibus consequatur pariatur neque recusandae a inventore
+                    enim explicabo omnis? Repudiandae, id.
+                    </p>
+                </div>
+                <div class="box">
+                    <ul class="links">
+                    <li><a href="#">Important link 1</a></li>
+                    <li><a href="#">Important link 2</a></li>
+                    <li><a href="#">Important link 3</a></li>
+                    <li><a href="#">Important link 4</a></li>
+                    <li><a href="#">Important link 5</a></li>
+                    </ul>
+                </div>
+            </div>
+                <div class="copyright">
+                <a href="main.html" class="logo"
+                    ><i class="fa-solid fa-book-open"></i> Chapterfly</a
+                >
+                <span class="text"
+                    >Copyright © 2024 Chapterfly Company S.L. All rights reserved.</span
+                >
+                </div>
+        </div>
+        <!-- End Footer -->
     </body>
 </html>
 
