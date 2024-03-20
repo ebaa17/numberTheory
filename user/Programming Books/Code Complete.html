@@ -10,7 +10,18 @@
         <meta property="og:description" content="Details about Code Complete Book">
         <meta property="og:locale" content="en-US">
         <meta property="og:site_name" content="Chapterfly">
-        
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+        rel="stylesheet"
+        />
+
+        <!-- Style sheet -->
+        <link rel="stylesheet" href="../styles/mainStyle.css" />
+        <link rel="stylesheet" href="../styles/all.min.css" />
+        <link rel="stylesheet" href="../../styles/Programming Books/code complete.css">
         <link rel="icon" href="">
         <style>
             body {
@@ -27,11 +38,54 @@
         </style>
     </head>
     <body>
+        <!-- Start Header -->
+        <div class="header" id="header">
+            <div class="container">
+                <a href="main.html" class="logo"><i class="fa-solid fa-book-open icon"></i> Chapterfly</a>
+
+                <ul class="main-nav">
+                    <li><a href="#about">About us</a></li>
+                    <li><a href="#how">How it works</a></li>
+                    <li><a href="#contact">Contact us</a></li>
+                    <li><a href="accountUser.html">Account</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">Signup</a></li>
+                    <li><a href="cart.html">My cart</a></li>
+                    <li>
+                    <a href="#discover" class="discover">Discover</a>
+                    <!-- Start drop down menu -->
+                    <div class="mega-menu">
+                        <div class="image">
+                        <img src="../images/discoverImage.png" alt=""/>
+                        </div>
+        
+                        <ul class="links">
+                        <li><a href="">Programming</a></li>
+                        <li><a href="">Fantasy</a></li>
+                        <li><a href="">Comedy</a></li>
+                        <li><a href="">Biography</a></li>
+                        <li><a href="">Science</a></li>
+                        </ul>
+                        <ul class="links">
+                        <li><a href="">Historiy</a></li>
+                        <li><a href="">Novels</a></li>
+                        <li><a href="">Adventure</a></li>
+                        <li><a href="">Culture</a></li>
+                        <li><a href="">Mystery</a></li>
+                        </ul>
+                    </div>
+                    <!-- end drop down menu -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Header -->
         <div class="book-details">
-            <img src="/images/Programming Books/code_complete.jpg" alt="Code Complete Book" class="book-img">
+            <img src="../images/Programming Books/code_complete.jpg" alt="Code Complete Book" class="book-img">
             <h1>Code Complete</h1>
             <p><strong>Author:</strong> Steve McConnell</p>
             <p><strong>Category:</strong> Programming</p>
+            <p><strong>ID:</strong> 2</p>
             <div class="description">
                 <strong>Description:</strong>
                 <section> Steve McConnell’s book provides practical advice on software construction, design, debugging, and testing. It covers everything from coding style to software architecture.
@@ -50,5 +104,47 @@
             <button class="btn-cart">Add to Cart</button>
             <a href="https://amzn.eu/d/7QE76TD">Read more</a>
         </div>
+        <!-- Start Footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="box">
+                    <h3>Chapterfly</h3>
+                    <ul class="social">
+                    <li>
+                        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    </ul>
+                    <p class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Necessitatibus consequatur pariatur neque recusandae a inventore
+                    enim explicabo omnis? Repudiandae, id.
+                    </p>
+                </div>
+                <div class="box">
+                    <ul class="links">
+                    <li><a href="#">Important link 1</a></li>
+                    <li><a href="#">Important link 2</a></li>
+                    <li><a href="#">Important link 3</a></li>
+                    <li><a href="#">Important link 4</a></li>
+                    <li><a href="#">Important link 5</a></li>
+                    </ul>
+                </div>
+            </div>
+                <div class="copyright">
+                <a href="main.html" class="logo"
+                    ><i class="fa-solid fa-book-open"></i> Chapterfly</a
+                >
+                <span class="text"
+                    >Copyright © 2024 Chapterfly Company S.L. All rights reserved.</span
+                >
+                </div>
+        </div>
+        <!-- End Footer -->
     </body>
 </html>
