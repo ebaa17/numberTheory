@@ -5,14 +5,14 @@
   call to action (done)
   benefits (done)
   Testimonials (done)
-  call to action
-  footer
+  call to action (done)
+  footer (done)
 */
 
 /* Start global rules */
 :root {
   --main-transition-duration: 0.3s;
-  /* Option one */
+
   --primary: #333a73;
   --secondary: #378ce7;
   --accent1: #67c6e3;
@@ -108,9 +108,8 @@ ul {
 .main-title:hover::after {
   right: 1px;
 }
-
 /* end global rules */
-
+/* ****************************************************** */
 /* Start header */
 .header {
   background-color: white;
@@ -244,7 +243,7 @@ ul {
   display: block;
 }
 /* End header */
-
+/* ****************************************************** */
 /* Start Landing */
 .landing {
   position: relative;
@@ -285,10 +284,8 @@ ul {
   max-width: 100%;
 }
 /* End Landing */
-
+/* ****************************************************** */
 /* Start Featured books */
-/* .featured {
-} */
 .featured .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -339,7 +336,7 @@ ul {
   font-size: 20px;
 }
 /* End Featured books */
-
+/* ****************************************************** */
 /* Start CTA */
 .main-cta {
   margin-top: 100px;
@@ -363,7 +360,6 @@ ul {
   font-weight: bold;
   border-bottom: 2px solid var(--bgcolor);
 }
-
 .main-cta .container .name i {
   margin-right: 30px;
   transition: 0.3s ease-out;
@@ -405,7 +401,7 @@ ul {
   color: var(--white);
 }
 /* End CTA */
-
+/* ****************************************************** */
 /* Start Benefits */
 .benefits {
   background-color: white;
@@ -497,11 +493,10 @@ ul {
   background-color: var(--accent2);
 }
 /* End Benefits */
-
+/* ****************************************************** */
 /* Start Testimonials */
 .testimonials {
   background-color: var(--bgcolor);
-  /* position: relative; */
   height: 100vh;
   margin-bottom: 50px;
   padding-top: 50px;
@@ -514,7 +509,6 @@ ul {
   gap: 50px;
 }
 .testimonials .container .box {
-  /* border: 5px solid; */
   padding: 20px;
   background-color: white;
   box-shadow: var(--main-box-shadow);
@@ -550,7 +544,7 @@ ul {
   margin-top: 10px;
 }
 /* End Testimonials */
-
+/* ****************************************************** */
 /* Start secondary CTA */
 .second-cta {
   padding: 50px;
@@ -584,7 +578,7 @@ ul {
   color: var(--primary);
 }
 /* End secondary CTA */
-
+/* ****************************************************** */
 /* Start Footer */
 footer {
   background-color: #31363F;
@@ -637,7 +631,5 @@ footer .copyright a {
 }
 footer .copyright a i {
   margin-right: 10px;
-}
-footer .copyright .text {
 }
 /* End Footer */
