@@ -4,7 +4,7 @@
   Featured books (done)
   call to action (done)
   benefits (done)
-  Testimonials
+  Testimonials (done)
   call to action
   footer
 */
@@ -537,15 +537,12 @@ ul {
 }
 .testimonials .box h3 {
   margin: 0 0 10px;
-
 }
 .testimonials .box .title {
   display: block;
 }
 .testimonials .box .filled {
-  color: #FFc107
-}
-.testimonials .box .rate {
+  color: #ffc107;
 }
 .testimonials .box p {
   line-height: 1.5;
@@ -553,3 +550,42 @@ ul {
   margin-top: 10px;
 }
 /* End Testimonials */
+
+/* Start secondary CTA */
+.second-cta {
+  padding: 50px;
+  background-color: white;
+  text-align: center;
+  height: 20vh;
+}
+.second-cta .container {
+}
+.second-cta .container .cta-buttons {
+}
+.second-cta .container .cta-buttons .primary-button {
+  font-size: 35px;
+  font-weight: bold;
+  margin: 0 20px 0 50px;
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(
+    to top,
+    var(--primary),
+    var(--secondary),
+    var(--accent1)
+  );
+  color: white;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--main-transition-duration)
+}
+.second-cta .container .cta-buttons .primary-button:hover {
+  box-shadow: var(--main-box-shadow);
+  padding: 30px;
+}
+.second-cta .container .cta-buttons .secondary-button {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary)
+}
+
+/* End secondary CTA */
