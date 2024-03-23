@@ -497,3 +497,59 @@ ul {
   background-color: var(--accent2);
 }
 /* End Benefits */
+
+/* Start Testimonials */
+.testimonials {
+  background-color: var(--bgcolor);
+  /* position: relative; */
+  height: 100vh;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+.testimonials .container {
+  margin-top: 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px;
+}
+.testimonials .container .box {
+  /* border: 5px solid; */
+  padding: 20px;
+  background-color: white;
+  box-shadow: var(--main-box-shadow);
+  border-radius: 6px;
+  transition: var(--main-transition-duration);
+  position: relative;
+}
+.testimonials .container .box:hover {
+  transform: translateY(-10px);
+  background-color: #f2f2f2;
+}
+.testimonials .box img {
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid var(--bgcolor);
+}
+.testimonials .box h3 {
+  margin: 0 0 10px;
+
+}
+.testimonials .box .title {
+  display: block;
+}
+.testimonials .box .filled {
+  color: #FFc107
+}
+.testimonials .box .rate {
+}
+.testimonials .box p {
+  line-height: 1.5;
+  color: #777;
+  margin-top: 10px;
+}
+/* End Testimonials */
