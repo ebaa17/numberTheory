@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="styles/LoginSignupStyle.css" />
+    <link rel="stylesheet" href="styles/all.min.css" />
+    <title>Chapterfly</title>
+  </head>
+  <body>
+    <!-- Start Header -->
+    <div class="header" id="header">
+      <div class="container">
+        <a href="main.html" class="logo"><i class="fa-solid fa-book-open icon"></i> Chapterfly</a
+        >
+
+        <ul class="main-nav">
+          <li><a href="#footer">Contact us</a></li>
+          <li><a href="accountUser.html">Account</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Signup</a></li>
+          <li><a href="cart.html">My cart</a></li>
+          <li>
+            <a href="#discover" class="discover">Discover</a>
+            <!-- Start drop down menu -->
+            <div class="mega-menu">
+              <div class="image">
+                <img src="images/discoverImage.png" alt=""/>
+              </div>
+
+              <ul class="links">
+                <li><a href="user/programmingBooks.html">Programming</a></li>
+                <li><a href="fantsy.html">Fantasy</a></li>
+                <li><a href="comedy.html">Comedy</a></li>
+                <li><a href="">Biography</a></li>
+                <li><a href="">Science</a></li>
+              </ul>
+              <ul class="links">
+                <li><a href="">Historiy</a></li>
+                <li><a href="">Novels</a></li>
+                <li><a href="">Adventure</a></li>
+                <li><a href="">Culture</a></li>
+                <li><a href="">Mystery</a></li>
+              </ul>
+            </div>
+            <!-- end drop down menu -->
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- End Header -->
+
+    <!--start login signup section-->
+
+    <div class="login_signup_section">
+        <div class="LScontainer" id="LScontainer">
+            <div class="signup">
+                <form>
+                    <h1 id="signuph1">Create Account</h1>
+                    <span>Enter your information to complete</span>
+                    <span>registeration</span>
+                    <div class="form_inputs">
+                        <input type="text" placeholder="User Name">
+                        <input type="email" placeholder="E-Mail">
+                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Confirm Password">
+                    </div><!--form inputs-->
+                    <button>Sign Up</button>
+                </form>
+                <div class="admin">
+                    <input type="checkbox" class="checkbox_admin">
+                <label class="is_admin_label" for="is_admin">Sign Up as Admin</label>
+                </div>
+            </div><!-- end signup-->
+    
+            <div class="login">
+                <form>
+                    <h1>LogIn</h1>
+                    <span class="login_desc">Enter UserName and Password</span>
+                    <div class="form_inputs">
+                        <input type="text" placeholder="User Name">
+                        <input type="password" placeholder="Password">
+                    </div><!--form input-->
+                    <button id="login_btn">Log In</button>
+                    <span class="forget_password"><a href="forget_password.html">Forgot your Password?</a></span>
+                </form>
+            </div><!-- end login-->
+    
+            <div class="circle-container">
+                <div class="circle">
+                    <div class="circle_left">
+                        <h1>Already have account!</h1>
+                        <span>Enter your personal details to use</span>
+                        <span> all of site features</span>
+                        <button class="hidden" id="Login">Log In</button>
+                    </div><!--circle left-->
+                    <div class="circle_right">
+                        <h1>Welcome to Chapterfly!</h1>
+                        <span>Register with your personal details to make</span><span>an account in Chapterfly</span>
+                        <button class="hidden" id="register">Sign Up</button>
+                    </div><!--circle right-->
+                </div><!--circle-->
+            </div><!--circle-container-->
+    
+        </div><!--container-->
+    </div><!--end login signup section-->
+    <script src="javascript/LoginSignupJS.js"></script>
+  </body>
+  </html>
