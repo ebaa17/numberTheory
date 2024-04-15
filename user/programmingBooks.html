@@ -24,56 +24,56 @@
         <link rel="stylesheet" href="../styles/User_programmingBooks.css">
 
         <link rel="icon" href="">
+        
     </head>
     <body>
         <!-- Start Header -->
-        <div class="header" id="header">
-            <div class="container">
-                <a href="main.html" class="logo"><i class="fa-solid fa-book-open icon"></i> Chapterfly</a>
-
-                <ul class="main-nav">
-                    <li><a href="#about">About us</a></li>
-                    <li><a href="#how">How it works</a></li>
-                    <li><a href="#contact">Contact us</a></li>
-                    <li><a href="accountUser.html">Account</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="signup.html">Signup</a></li>
-                    <li><a href="cart.html">My cart</a></li>
-                    <li>
-                    <a href="#discover" class="discover">Discover</a>
-                    <!-- Start drop down menu -->
-                    <div class="mega-menu">
-                        <div class="image">
-                        <img src="../images/discoverImage.png" alt=""/>
-                        </div>
-        
-                        <ul class="links">
-                        <li><a href="">Programming</a></li>
-                        <li><a href="">Fantasy</a></li>
-                        <li><a href="">Comedy</a></li>
-                        <li><a href="">Biography</a></li>
-                        <li><a href="">Science</a></li>
-                        </ul>
-                        <ul class="links">
-                        <li><a href="">Historiy</a></li>
-                        <li><a href="">Novels</a></li>
-                        <li><a href="">Adventure</a></li>
-                        <li><a href="">Culture</a></li>
-                        <li><a href="">Mystery</a></li>
-                        </ul>
-                    </div>
-                    <!-- end drop down menu -->
-                    </li>
+    <div class="header" id="header">
+        <div class="container">
+          <a href="../main.html" class="logo"><i class="fa-solid fa-book-open icon"></i> Chapterfly</a
+          >
+  
+          <ul class="main-nav">
+            <li><a href="#footer">Contact us</a></li>
+            <li><a href="../accountUser.html">Account</a></li>
+            <li><a href="../login.html">Login</a></li>
+            <li><a href="../signup.html">Signup</a></li>
+            <li><a href="../cart.html">My cart</a></li>
+            <li>
+              <a href="#discover" class="discover">Discover</a>
+              <!-- Start drop down menu -->
+              <div class="mega-menu">
+                <div class="image">
+                  <img src="../images/discoverImage.png" alt=""/>
+                </div>
+  
+                <ul class="links">
+                  <li><a href="#">Programming</a></li>
+                  <li><a href="../fantsy.html">Fantasy</a></li>
+                  <li><a href="../comedy.html">Comedy</a></li>
+                  <li><a href="">Biography</a></li>
+                  <li><a href="">Science</a></li>
                 </ul>
-            </div>
+                <ul class="links">
+                  <li><a href="">Historiy</a></li>
+                  <li><a href="">Novels</a></li>
+                  <li><a href="">Adventure</a></li>
+                  <li><a href="">Culture</a></li>
+                  <li><a href="">Mystery</a></li>
+                </ul>
+              </div>
+              <!-- end drop down menu -->
+            </li>
+          </ul>
         </div>
-        <!-- End Header -->
+      </div>
+      <!-- End Header -->
         <!-- Search books -->
         <search>
             <!-- <form action="" method=""> -->
             <!-- <label for="searchInput">Search:</label> -->
             <input type="text" id="searchInput" placeholder="Search by title, author, or category">
-            <button onclick="searchBooks()">Search</button>
+            <button onclick="searchBooks()" class="searchBtn">Search</button>
             <!-- </form> -->
         </search>
 
@@ -87,7 +87,7 @@
                     Discover a rich collection of programming books in our online library. Explore topics ranging from algorithms to web development. Start your learning journey today!
                 </p>
             </div>
-            <div class="image">
+            <div class="image" style="width: 50%;">
                 <img src="../images/ProgrammingBooks.png" alt="" />
             </div>
             </div>
@@ -107,37 +107,48 @@
             <!-- <p>Select a book to view its details:</p> -->
             <div class="container">
                 <div class="box">
-                    <img src="../images/Programming Books/cLeanCode.jpg" alt=""/>
+                    <img src="../images/Programming Books/cLeanCode.jpg" alt="" class="book-img"  style="width: 600px"/>
                     <div class="content">
                     <h3>Clean Code</h3>
                     <p>
                         A Handbook of Agile Software Craftsmanship.
+                        It presents programming algorithms and their analysis.(Recommended)
                     </p>
                     </div>
                     <div class="info">
                     <a href="Programming Books/cleanCode.html" class="read-more"
                         >Read More <i class="fas fa-long-arrow-alt-right"></i
                     ></a>
-                    <a href="../cart.html" class="add-to-cart">Add to Cart</a>
+                    <div class="add-to-cart">
+                        <button type="button" class="addToCart-btn" title="Add to cart" id="add-to-cart-button" onclick='addToCart(1, "Clean Code", 50, "images/Programming Books/cLeanCode.jpg", "Programming")'>
+                            <span>Add to cart </span>
+                        </button>
                     </div>
                 </div>
+                </div>
                 <div class="box">
-                    <img src="../images/Programming Books/the_pragmatic_programmer.jpg" alt="" />
+                    <img src="../images/Programming Books/the_pragmatic_programmer.jpg" alt="" class="book-img" style="width: 600px"/>
                     <div class="content">
                     <h3>The Pragmatic Programmer</h3>
                     <p>
                         Offers pragmatic tips to improve your programming and development process.
+                        It presents programming algorithms and their analysis.(Recommended)
+
                     </p>
                     </div>
                     <div class="info">
                     <a href="Programming Books/The Pragmatic Programmer.html" class="read-more"
                         >Read More <i class="fas fa-long-arrow-alt-right"></i
                     ></a>
-                    <a href="../cart.html" class="add-to-cart">Add to Cart</a>
+                    <div class="add-to-cart">
+                        <button type="button" class="addToCart-btn" title="Add to cart" id="add-to-cart-button" onclick='addToCart(2, "The Pragmatic Programmer", 30, "images/Programming Books/the_pragmatic_programmer.jpg", "Programming")'>
+                            <span>Add to cart </span>
+                        </button>
+                    </div>
                     </div>
                 </div>
                 <div class="box">
-                    <img src="../images/Programming Books/the_mythical_man_month.jpg" alt="" width="200px" />
+                    <img src="../images/Programming Books/the_mythical_man_month.jpg" alt="" class="book-img" style="width: 600px" />
                     <div class="content">
                     <h3>The Mythical Man-Month</h3>
                     <p>
@@ -148,41 +159,56 @@
                     <a href="Programming Books/The Mythical Man-Month.html" class="read-more"
                         >Read More <i class="fas fa-long-arrow-alt-right"></i
                     ></a>
-                    <a href="../cart.html" class="add-to-cart">Add to Cart</a>
+                    <div class="add-to-cart">
+                        <button type="button" class="addToCart-btn" title="Add to cart" id="add-to-cart-button" onclick='addToCart(3, "The Mythical Man-Month", 50, "images/Programming Books/the_mythical_man_month.jpg", "Programming")'>
+                            <span>Add to cart </span>
+                        </button>
                     </div>
                 </div>
+                </div>
                 <div class="box">
-                    <img src="../images/Programming Books/the_art_of_computer_programming.jpg" alt="" width="200px" />
+                    <img src="../images/Programming Books/the_art_of_computer_programming.jpg" alt="" class="book-img" style="width: 600px"/>
                     <div class="content">
                     <h3>The Art of Computer Programming</h3>
                     <p>
                         It presents programming algorithms and their analysis.
+                        It presents programming algorithms and their analysis.(Recommended)
+                        Introduces fundamental design patterns that enhance code reusability and maintainability.
                     </p>
                     </div>
                     <div class="info">
                     <a href="Programming Books/The Art of Computer Programming.html" class="read-more"
                         >Read More <i class="fas fa-long-arrow-alt-right"></i
                     ></a>
-                    <a href="../cart.html" class="add-to-cart">Add to Cart</a>
+                    <div class="add-to-cart">
+                        <button type="button" class="addToCart-btn" title="Add to cart" id="add-to-cart-button" onclick='addToCart(4, "The Art of Computer Programming", 50, "images/Programming Books/the_art_of_computer_programming.jpg", "Programming")'>
+                            <span>Add to cart </span>
+                        </button>
                     </div>
                 </div>
+                </div>
                 <div class="box">
-                    <img src="../images/Programming Books/code_complete.jpg" alt="" width="200px" />
+                    <img src="../images/Programming Books/code_complete.jpg" alt="" class="book-img"  style="width: 600px"/>
                     <div class="content">
                     <h3>Code Complete</h3>
                     <p>
                         A Practical Handbook of Software Construction.
+                        Introduces fundamental design patterns that enhance code reusability and maintainability.
                     </p>
                     </div>
                     <div class="info">
                     <a href="Programming Books/Code Complete.html" class="read-more"
                         >Read More <i class="fas fa-long-arrow-alt-right"></i
                     ></a>
-                    <a href="../cart.html" class="add-to-cart">Add to Cart</a>
+                    <div class="add-to-cart">
+                        <button type="button" class="addToCart-btn" title="Add to cart" id="add-to-cart-button" onclick='addToCart(5, "Code Complete", 50, "images/Programming Books/code_complete.jpg", "Programming")'>
+                            <span>Add to cart </span>
+                        </button>
                     </div>
                 </div>
+                </div>
                 <div class="box">
-                    <img src="../images/Programming Books/design_patterns.jpg" alt="" width="200px" />
+                    <img src="../images/Programming Books/design_patterns.jpg" alt="" class="book-img" style="width: 600px"/>
                     <div class="content">
                     <h3>Design Patterns</h3>
                     <p>
@@ -193,12 +219,16 @@
                     <a href="Programming Books/Design Patterns.html" class="read-more"
                         >Read More <i class="fas fa-long-arrow-alt-right"></i
                     ></a>
-                    <a href="../cart.html" class="add-to-cart">Add to Cart</a>
+                    <div class="add-to-cart">
+                        <button type="button" class="addToCart-btn" title="Add to cart" id="add-to-cart-button" onclick='addToCart(6, "Design Patterns", 50, "images/Programming Books/design_patterns.jpg", "Programming")'>
+                            <span>Add to cart </span>
+                        </button>
+                    </div>
                     </div>
                 </div>
                 </div>
             </div>
-            <!-- more book links will be dynamically added -->
+            <!-- more book links will be dynamically added here -->
             <br>
             <!-- Available Books List -->
             <div class="Availability">
@@ -240,71 +270,61 @@
 
         <br>
         <!-- Borrow Book -->
-        <div class="borrowing">
-            <h2 class="main-title">Book Borrowing</h2>
+        <div class="borrowing main-cta">
+            <!-- <h2 class="main-title">Book Borrowing</h2> -->
             <div class="container">
+                <div class="name"><i class="fa-solid fa-book-open icon"></i> Book Borrowing</a></div>
                 <h2>Ready to share your love of books?</h>
+                <br>
                 <p>
                     Join our community and start borrowing books with ease!
                 </p>
-                <a href="borrow.html">Borrow a Book</a>
+                <!-- <a href="borrow.html">Borrow a Book</a> -->
+                <div class="cta-buttons">
+                    <a href="borrow.html" class="primary-button">Borrow a Book</a>
+                </div>
             </div>
         </div>
-
         <br>
 
         <!-- Start Footer -->
-        <div class="footer">
-            <div class="container">
-                <div class="box">
-                    <h3>Chapterfly</h3>
-                    <ul class="social">
-                    <li>
-                        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-                    <li>
-                        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    </ul>
-                    <p class="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Necessitatibus consequatur pariatur neque recusandae a inventore
-                    enim explicabo omnis? Repudiandae, id.
-                    </p>
-                </div>
-                <div class="box">
-                    <ul class="links">
-                    <li><a href="#">Important link 1</a></li>
-                    <li><a href="#">Important link 2</a></li>
-                    <li><a href="#">Important link 3</a></li>
-                    <li><a href="#">Important link 4</a></li>
-                    <li><a href="#">Important link 5</a></li>
-                    </ul>
-                </div>
+    <footer>
+        <div class="container">
+          <div class="boxes">
+            <div class="box">
+              <h3> <i class="fa-solid fa-book-open icon"></i> Chapterfly</h3>
+              <p>Chapterfly was born out of a shared love for books and a desire to make them more accessible.</p>
+              <div class="social">
+                <img src="https://placehold.co/30x30" alt="">
+                <img src="https://placehold.co/30x30" alt="">
+                <img src="https://placehold.co/30x30" alt="">
+              </div>
             </div>
-                <div class="copyright">
-                <a href="main.html" class="logo"
-                    ><i class="fa-solid fa-book-open"></i> Chapterfly</a
-                >
-                <span class="text"
-                    >Copyright © 2024 Chapterfly Company S.L. All rights reserved.</span
-                >
-                </div>
+            <div class="box">
+              <h4>EXPLORE</h4>
+              <ul>
+                <li><a href="../user/programmingBooks.html">Programming</a></li>
+                <li><a href="../fantsy.html">Fantasy</a></li>
+                <li><a href="../comedy.html">Comedy</a></li>
+              </ul>
+            </div>
+            <div class="box">
+              <h4>KNOW MORE</h4>
+              <p>But sometimes, the cost or difficulty of finding new books can act as a barrier.</p>
+            </div>
+            <div class="box">
+              <h4>ABOUT</h4>
+              <p>We believe that stories have the power to transport us, teach us, and connect us.</p>
+            </div>
+          </div>
+          <div class="bottom-line">
+            <p>© 2024 Chapterfly</p>
+            <p>All rights reserved.</p>
+          </div>
         </div>
-        <!-- End Footer -->
+      </footer>
+      <!-- End Footer -->
+        <script src="../js/cart.js"></script>
+
     </body>
 </html>
-
-
-
-
-<!--
-    Search for books by titles or author or category and results are displayed accordingly. : done
-    View list of available books marked either available or not available in case it is borrowed by a user. : done
-    Select a book and view its details in a book page. : done
-    Borrow a book (only applicable in case a book is available). : done
-    View list of borrowed books for that user. : done
--->
