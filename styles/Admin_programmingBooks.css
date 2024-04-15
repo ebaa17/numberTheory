@@ -1,18 +1,46 @@
 body {
     font-family: Arial, sans-serif;
 }
-table {
+
+#bookTable {
     border-collapse: collapse;
-    width: 100%;
+    /* width: 100%; */
+    max-width: 90%;
+    margin: 0 auto;
 }
-th, td {
+
+#bookTable th, #bookTable td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 }
-th {
+
+#bookTable tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+
+#bookTable tr:hover {
+    background-color: #ddd;
+}
+
+#bookTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #58a3da;
+    color: white;
+}
+
+.Buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.edit, .delete{
+    width: 50px;
+}
+
 .delete{
     float: right;
     margin-right: 10px;
@@ -22,64 +50,18 @@ th {
     padding: 5px 5px;
     border: none;
     border-radius: 4px;
-    cursor: pointer; /* Change cursor to pointer on hover */
+    cursor: pointer;
 }
+
 .delete:hover{
-    background-color: #ff00008d;
+    background-color: #c60000;
     color: white;
-}
-a button {
-    background-color: #4CAF50; /* Green color */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer; /* Change cursor to pointer on hover */
-}
-a button:hover {
-    background-color: #45a049;
-}
-.addingBook .container {
-    padding: 20px;
-}
-
-.addingBook {
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    margin-top: 20px;
-    padding: 20px;
-    text-align: center;
-}
-
-.addingBook .container h2 {
-    color: #444;
-}
-
-.addingBook p {
-    color: #666;
-}
-
-.addingBook a {
-    display: inline-block;
-    color: #fff;
-    background-color: #007BFF;
-    padding: 10px 20px;
-    margin-top: 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: var(--main-transition-duration);
-}
-
-.addingBook a:hover {
-    background-color: #0056b3;
-    transform: translateY(-10px);
-    box-shadow: var(--main-box-shadow);
 }
 
 .edit{
     margin-right: 10px;
     margin-top: 10px;
-    background-color: #58a3da;
+    background-color: #4CAF50;
     color: #fff;
     padding: 5px 5px;
     border: none;
@@ -87,10 +69,6 @@ a button:hover {
     cursor: pointer; /* Change cursor to pointer on hover */
 }
 
-.edit, .delete{
-    width: 50px;
-}
-
 .edit:hover{
-    background-color: #58a4dac2;
+    background-color: #46d74b;
 }
