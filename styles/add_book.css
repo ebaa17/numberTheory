@@ -1,9 +1,9 @@
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
 }
-form {
+
+.AddingBook {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -11,25 +11,41 @@ form {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-label {
+
+.AddingBook label {
     display: block;
     margin-bottom: 10px;
 }
-input, textarea {
+
+.AddingBook input, .description {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
-button {
+
+.AddingBook input:focus, .description:focus{
+    outline: none;
+    border: 1px solid #212529;
+}
+
+.description {
+    min-height: 100px;
+    width: 100%;
+    resize: none;
+}
+
+.AddingBookBtn {
     background-color: #007bff;
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 3px;
     cursor: pointer;
+    font-size: 1rem;
 }
-button:hover {
+
+.AddingBookBtn:hover {
     background-color: #0056b3;
 }
