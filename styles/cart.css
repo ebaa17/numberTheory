@@ -122,9 +122,11 @@ a, a:visited, a:active, a:link, a:focus {
     background-color: #2e6da4;
 }
 
-.btn-checkout, .btn-checkout:hover{
-    background: #58a3da;
-    color: #fff;
+.btn-checkout{
+    background-color: #B3DFFF;
+}
+.btn-checkout:hover{
+    background-color: #58a3da;
 }
 
 .btn {
@@ -155,4 +157,13 @@ a, a:visited, a:active, a:link, a:focus {
 .pull-right {
     float: right;
     margin-right: 20px;
+}
+
+.checkout{
+    display: flex;
+    justify-content: center;
+}
+
+.checkout > div{
+    width: 70%;
 }
