@@ -90,3 +90,7 @@ a button:hover {
 .edit, .delete{
     width: 50px;
 }
+
+.edit:hover{
+    background-color: #58a4dac2;
+}
