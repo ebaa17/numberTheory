@@ -1,60 +1,104 @@
 body {
     font-family: Arial, sans-serif;
 }
+
 .book-details {
-    max-width: 900px;
+    max-width: 1220px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-/* Style the book image */
 .book-img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+    object-fit: cover;
     float: right;
 }
 
-/* Style the book description */
-.description {
-    max-width: 400px;
-    font-size: 16px;
-    line-height: 1.5;
+.book-details p {
+    line-height: 1.6;
 }
 
-/* Style the list of ideas presented */
-ul {
+.bookDiscription{
+    max-width: 50%;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.description section {
+    margin-bottom: 10px;
+}
+
+.description ul {
     list-style-type: disc;
+    list-style-position: inside;
     margin-left: 20px;
 }
 
-/* Style the price and buttons */
-.price, button {
+.bookPrice{
     margin-top: 10px;
 }
 
-/* Style the "Read more" link */
-a {
-    color: #0077B5;
-    text-decoration: none;
-    font-weight: bold;
+.price {
+    font-size: 20px;
+    color: #333;
+    margin: 20px 0;
 }
 
-/* Hover effect for the "Read more" link */
-a:hover {
-    text-decoration: underline;
+.btns{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-button {
-    background-color: #007bff;
+.borrowBook {
+    background-color: #58a3da;
     color: #fff;
     border: none;
     padding: 10px 20px;
-    border-radius: 3px;
+    border-radius: 5px;
     cursor: pointer;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
-button:hover {
-    background-color: #0056b3;
+
+.borrowBook:hover {
+    background-color: #4CAF50;
+}
+
+.cartBtn{
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+    margin: 0;
+    font: inherit;
+    overflow: visible;
+    text-transform: none;
+    -webkit-appearance: button;
+    font-family: inherit;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 0;
+    background: #58a3da;
+    color: #fff;
+    width: 100%;
 }
