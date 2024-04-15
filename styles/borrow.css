@@ -32,3 +32,12 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+.book-img{
+    width: 20px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
