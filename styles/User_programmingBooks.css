@@ -36,6 +36,16 @@ search{
     display: flex;
     justify-content: center;
 }
+
+.book-img{
+    width: 20px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .Availability {
     font-family: Arial, sans-serif;
 }
@@ -80,6 +90,7 @@ search{
 }
 .intro, .conclusion {
     font-style: italic;
+    font-size: larger;
     color: #333;
     background-color: #effafc;
     padding: 20px;
@@ -90,7 +101,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.borrowing .container {
+/* .borrowing .container {
     padding: 20px;
 }
 
@@ -125,20 +136,59 @@ body {
     background-color: #0056b3;
     transform: translateY(-10px);
     box-shadow: var(--main-box-shadow);
-}
+} */
+
 .box {
     position: relative;
 }
+
 .add-to-cart {
-    position: absolute;
+    /* position: absolute; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     bottom: 10px;
     right: 10px;
     color: white;
     padding: 10px;
     text-decoration: none;
     display: none; /* Hide it by default */
+    
 }
 
 .box:hover .add-to-cart {
     display: block; /* Show it on hover */
+}
+
+.addToCart-btn{
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    visibility: visible;
+    box-sizing: border-box;
+    font: inherit;
+    overflow: visible;
+    -webkit-appearance: button;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: capitalize;
+    background-color: #58a3da;
+    border-radius: 18px;
+    padding: 0 10px;
+    height: 34px;
+    line-height: 100%;
+    border: none;
+    position: relative;
+    top: -2px;
+    margin: 0 1px;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transform: translateY(0px);
+}
+
+.addToCart-btn:hover {
+    background-color: transparent;
+    border: 2px solid #58a3da;
+    color: #000;
 }
