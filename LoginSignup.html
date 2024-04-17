@@ -14,7 +14,7 @@
 
     <!-- Style sheet -->
     <link rel="stylesheet" href="styles/LoginSignupStyle.css" />
-    <link rel="stylesheet" href="styles/all.min.css" />
+    <!-- <link rel="stylesheet" href="styles/all.min.css" /> -->
     <title>Chapterfly</title>
   </head>
   <body>
@@ -75,11 +75,11 @@
                         <input type="password" placeholder="Password">
                         <input type="password" placeholder="Confirm Password">
                     </div><!--form inputs-->
-                    <button>Sign Up</button>
+                    <div id="signupinform">Sign Up</div>
                 </form>
                 <div class="admin">
-                    <input type="checkbox" class="checkbox_admin">
-                <label class="is_admin_label" for="is_admin">Sign Up as Admin</label>
+                    <input type="checkbox" id="checkboxAdmin" class="checkbox_admin">
+                <label class="is_admin_label" for="checkboxAdmin">Sign Up as Admin</label>
                 </div>
             </div><!-- end signup-->
     
@@ -102,12 +102,12 @@
                         <h1>Already have account!</h1>
                         <span>Enter your personal details to use</span>
                         <span> all of site features</span>
-                        <button class="hidden" id="Login">Log In</button>
+                        <button id="Login">Log In</button>
                     </div><!--circle left-->
                     <div class="circle_right">
                         <h1>Welcome to Chapterfly!</h1>
                         <span>Register with your personal details to make</span><span>an account in Chapterfly</span>
-                        <button class="hidden" id="register">Sign Up</button>
+                        <button id="register">Sign Up</button>
                     </div><!--circle right-->
                 </div><!--circle-->
             </div><!--circle-container-->
@@ -115,5 +115,7 @@
         </div><!--container-->
     </div><!--end login signup section-->
     <script src="javascript/LoginSignupJS.js"></script>
+    <script src="javascript/adminORuser.js">
+    </script>
   </body>
   </html>
