@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
       rel="stylesheet"
     />
-    <title>Novels</title> 
+    <title>Chapterfly</title> 
     <link rel="stylesheet" type="text/css" href="styles/novelsUserstyle.css">
     <link rel="stylesheet" href="styles/font-awesome.min.css">
 </head>
@@ -56,7 +56,6 @@
               </div>
               <!-- end drop down menu -->
             </li>
-            <li><a href="cart.html">Available Books</a></li>
           </ul>
         </div>
       </div>
@@ -70,48 +69,60 @@
     <main>
         <h1 class="welcome">Welcome to the Novels Category</h1>
         <h2 class="best_sales">Best Sales 2024</h2>
-        <ul class="best_books">
-            <li class="best_books_item">
-                <img class="best_books_item_img" src="images/novelbook1.jpg">
-                <span class="best_books_item_name">the fox wife</span>
-                <span class="best_books_item_author">yangsze choo</span>
-                <span class="best_books_item_price">20.00$</span>
-                <span class="best_books_item_id">1001444</span>
-                <div class="borrow_book">Borrow</div>
-            </li> <!--best_books_item-->
-            <li class="best_books_item">
-                <img class="best_books_item_img" src="images/novelbook2.jpg">
-                <span class="best_books_item_name">the fox wife</span>
-                <span class="best_books_item_author">yangsze choo</span>
-                <span class="best_books_item_price">20.00$</span>
-                <span class="best_books_item_id">1001444</span>
-                <div class="borrow_book">Borrow</div>
-            </li> <!--best_books_item-->
-            <li class="best_books_item">
-                <img class="best_books_item_img" src="images/novelbook3.jpg">
-                <span class="best_books_item_name">the fox wife</span>
-                <span class="best_books_item_author">yangsze choo</span>
-                <span class="best_books_item_price">20.00$</span>
-                <span class="best_books_item_id">1001444</span>
-                <div class="borrow_book">Borrow</div>
-            </li> <!--best_books_item-->
-            <li class="best_books_item">
-                <img class="best_books_item_img" src="images/novelbook4.jpg">
-                <span class="best_books_item_name">the fox wife</span>
-                <span class="best_books_item_author">yangsze choo</span>
-                <span class="best_books_item_price">20.00$</span>
-                <span class="best_books_item_id">1001444</span>
-                <div class="borrow_book">Borrow</div>
-            </li> <!--best_books_item-->
-            <li class="best_books_item">
-                <img class="best_books_item_img" src="images/novelbook5.jpg">
-                <span class="best_books_item_name">the fox wife</span>
-                <span class="best_books_item_author">yangsze choo</span>
-                <span class="best_books_item_price">20.00$</span>
-                <span class="best_books_item_id">1001444</span>
-                <div class="borrow_book">Borrow</div>
-            </li> <!--best_books_item-->
-        </ul><!--best_books list-->
+        <div class="best_books_section">
+            <ul class="best_books">
+                <li class="best_books_item">
+                    <img class="best_books_item_img" src="images/Novels/novelbook1.jpg">
+                    <span class="best_books_item_name">the fox wife</span>
+                    <span class="best_books_item_author">yangsze choo</span>
+                    <span class="best_books_item_price">20.00$</span>
+                    <span class="best_books_item_id">1001444</span>
+                    <div class="borrow_book">Borrow</div>
+                    <div class="add-to-cart">
+                        <button type="button" class="addToCart-btn" title="Add to cart" id="add-to-cart-button" onclick='addToCart(1,"the fox wife" , 20,"images/Novels/novelbook1.jpg", "novels")'>
+                            <span>Add to cart</span>
+                        </button>
+                    </div>
+                </li> <!--best_books_item-->
+                <li class="best_books_item">
+                    <img class="best_books_item_img" src="images/Novels/novelbook2.jpg">
+                    <span class="best_books_item_name">the fox wife</span>
+                    <span class="best_books_item_author">yangsze choo</span>
+                    <span class="best_books_item_price">20.00$</span>
+                    <span class="best_books_item_id">1001444</span>
+                    <div class="borrow_book">Borrow</div>
+                </li> <!--best_books_item-->
+                <li class="best_books_item">
+                    <img class="best_books_item_img" src="images/Novels/novelbook3.jpg">
+                    <span class="best_books_item_name">the fox wife</span>
+                    <span class="best_books_item_author">yangsze choo</span>
+                    <span class="best_books_item_price">20.00$</span>
+                    <span class="best_books_item_id">1001444</span>
+                    <div class="borrow_book">Borrow</div>
+                </li> <!--best_books_item-->
+                <li class="best_books_item">
+                    <img class="best_books_item_img" src="images/Novels/novelbook4.jpg">
+                    <span class="best_books_item_name">the fox wife</span>
+                    <span class="best_books_item_author">yangsze choo</span>
+                    <span class="best_books_item_price">20.00$</span>
+                    <span class="best_books_item_id">1001444</span>
+                    <div class="borrow_book">Borrow</div>
+                </li> <!--best_books_item-->
+                <li class="best_books_item">
+                    <img class="best_books_item_img" src="images/Novels/novelbook5.jpg">
+                    <span class="best_books_item_name">the fox wife</span>
+                    <span class="best_books_item_author">yangsze choo</span>
+                    <span class="best_books_item_price">20.00$</span>
+                    <span class="best_books_item_id">1001444</span>
+                    <div class="borrow_book">Borrow</div>
+                </li> <!--best_books_item-->
+            </ul><!--best_books list-->
+            <div class="admin_best_sales">
+                <div class="delete_best_sales">Delete Book</div>
+                <div class="upload_best_sales">Upload Book</div>
+                <div class="edit_best_sales">Edit Book</div>
+            </div>
+        </div><!--best_books section-->
 
         <!--  best books doneee-->
 
@@ -126,7 +137,7 @@
         
             <ul class="fiction_books">
                 <li class="fiction_books_item">
-                    <img class="fiction_books_item_img" src="images/novelbook1.jpg">
+                    <img class="fiction_books_item_img" src="images/Novels/novelbook1.jpg">
                     <span class="fiction_books_item_name">the fox wife</span>
                     <span class="fiction_books_item_author">yangsze choo</span>
                     <span class="fiction_books_item_price">20.00$</span>
@@ -134,7 +145,7 @@
                     <div class="borrow_book">Borrow</div>
                 </li> <!--best_books_item-->
                 <li class="fiction_books_item">
-                    <img class="fiction_books_item_img" src="images/novelbook2.jpg">
+                    <img class="fiction_books_item_img" src="images/Novels/novelbook2.jpg">
                     <span class="fiction_books_item_name">the fox wife</span>
                     <span class="fiction_books_item_author">yangsze choo</span>
                     <span class="fiction_books_item_price">20.00$</span>
@@ -142,7 +153,7 @@
                     <div class="borrow_book">Borrow</div>
                 </li> <!--fiction_books_item-->
                 <li class="fiction_books_item">
-                    <img class="fiction_books_item_img" src="images/novelbook3.jpg">
+                    <img class="fiction_books_item_img" src="images/Novels/novelbook3.jpg">
                     <span class="fiction_books_item_name">the fox wife</span>
                     <span class="fiction_books_item_author">yangsze choo</span>
                     <span class="fiction_books_item_price">20.00$</span>
@@ -150,7 +161,7 @@
                     <div class="borrow_book">Borrow</div>
                 </li> <!--best_books_item-->
                 <li class="fiction_books_item">
-                    <img class="fiction_books_item_img" src="images/novelbook4.jpg">
+                    <img class="fiction_books_item_img" src="images/Novels/novelbook4.jpg">
                     <span class="fiction_books_item_name">the fox wife</span>
                     <span class="fiction_books_item_author">yangsze choo</span>
                     <span class="fiction_books_item_price">20.00$</span>
@@ -158,15 +169,19 @@
                     <div class="borrow_book">Borrow</div>
                 </li> <!--fiction_books_item-->
                 <li class="fiction_books_item">
-                    <img class="fiction_books_item_img" src="images/novelbook5.jpg">
+                    <img class="fiction_books_item_img" src="images/Novels/novelbook5.jpg">
                     <span class="fiction_books_item_name">the fox wife</span>
                     <span class="fiction_books_item_author">yangsze choo</span>
                     <span class="fiction_books_item_price">20.00$</span>
                     <span class="fiction_books_item_id">1001444</span>
                     <div class="borrow_book">Borrow</div>
                 </li> <!--fiction_books_item-->
-            </ul><!--fiction_books list--> 
-        
+            </ul><!--fiction_books list-->
+            <div class="admin_best_sales admin_fiction_sales">
+                <div class="delete_best_sales delete_fiction_sales">Delete Book</div>
+                <div class="upload_best_sales upload_fiction_sales">Upload Book</div>
+                <div class="edit_best_sales edit_fiction_sales">Edit Book</div>
+            </div> 
          <!--fiction sectin doneee-->   
         
          
@@ -180,7 +195,7 @@
 
             <ul class="historical_books">
                 <li class="historical_books_item">
-                    <img class="historical_books_item_img" src="images/novelbook1.jpg">
+                    <img class="historical_books_item_img" src="images/Novels/novelbook1.jpg">
                     <span class="historical_books_item_name">the fox wife</span>
                     <span class="historical_books_item_author">yangsze choo</span>
                     <span class="historical_books_item_price">20.00$</span>
@@ -188,7 +203,7 @@
                     <div class="borrow_book">Borrow</div>
                 </li> <!--best_books_item-->
                 <li class="historical_books_item">
-                    <img class="historical_books_item_img" src="images/novelbook2.jpg">
+                    <img class="historical_books_item_img" src="images/Novels/novelbook2.jpg">
                     <span class="historical_books_item_name">the fox wife</span>
                     <span class="historical_books_item_author">yangsze choo</span>
                     <span class="historical_books_item_price">20.00$</span>
@@ -196,7 +211,7 @@
                     <div class="borrow_book">Borrow</div>
                 </li> <!--historical_books_item-->
                 <li class="historical_books_item">
-                    <img class="historical_books_item_img" src="images/novelbook3.jpg">
+                    <img class="historical_books_item_img" src="images/Novels/novelbook3.jpg">
                     <span class="historical_books_item_name">the fox wife</span>
                     <span class="historical_books_item_author">yangsze choo</span>
                     <span class="historical_books_item_price">20.00$</span>
@@ -204,7 +219,7 @@
                     <div class="borrow_book">Borrow</div>
                 </li> <!--best_books_item-->
                 <li class="historical_books_item">
-                    <img class="historical_books_item_img" src="images/novelbook4.jpg">
+                    <img class="historical_books_item_img" src="images/Novels/novelbook4.jpg">
                     <span class="historical_books_item_name">the fox wife</span>
                     <span class="historical_books_item_author">yangsze choo</span>
                     <span class="historical_books_item_price">20.00$</span>
@@ -212,7 +227,7 @@
                     <div class="borrow_book">Borrow</div>
                 </li> <!--historical_books_item-->
                 <li class="historical_books_item">
-                    <img class="historical_books_item_img" src="images/novelbook5.jpg">
+                    <img class="historical_books_item_img" src="images/Novels/novelbook5.jpg">
                     <span class="historical_books_item_name">the fox wife</span>
                     <span class="historical_books_item_author">yangsze choo</span>
                     <span class="historical_books_item_price">20.00$</span>
@@ -220,7 +235,11 @@
                     <div class="borrow_book">Borrow</div>
                 </li> <!--historical_books_item-->
             </ul><!--historical_books list--> 
-            
+            <div class="admin_best_sales admin_historical_sales">
+                <div class="delete_best_sales delete_historical_sales">Delete Book</div>
+                <div class="upload_best_sales upload_historical_sales">Upload Book</div>
+                <div class="edit_best_sales edit_historical_sales">Edit Book</div>
+            </div> 
          <!--historical sectin doneee--> 
          
 
@@ -234,7 +253,7 @@
 
             <ul class="horror_books">
                 <li class="horror_books_item">
-                    <img class="horror_books_item_img" src="images/novelbook1.jpg">
+                    <img class="horror_books_item_img" src="images/Novels/novelbook1.jpg">
                     <span class="horror_books_item_name">the fox wife</span>
                     <span class="horror_books_item_author">yangsze choo</span>
                     <span class="horror_books_item_price">20.00$</span>
@@ -242,7 +261,7 @@
                     <div class="borrow_book">Borrow</div>
                 </li> <!--best_books_item-->
                 <li class="horror_books_item">
-                    <img class="horror_books_item_img" src="images/novelbook2.jpg">
+                    <img class="horror_books_item_img" src="images/Novels/novelbook2.jpg">
                     <span class="horror_books_item_name">the fox wife</span>
                     <span class="horror_books_item_author">yangsze choo</span>
                     <span class="horror_books_item_price">20.00$</span>
@@ -250,7 +269,7 @@
                     <div class="borrow_book">Borrow</div>
                 </li> <!--horror_books_item-->
                 <li class="horror_books_item">
-                    <img class="horror_books_item_img" src="images/novelbook3.jpg">
+                    <img class="horror_books_item_img" src="images/Novels/novelbook3.jpg">
                     <span class="horror_books_item_name">the fox wife</span>
                     <span class="horror_books_item_author">yangsze choo</span>
                     <span class="horror_books_item_price">20.00$</span>
@@ -258,7 +277,7 @@
                     <div class="borrow_book">Borrow</div>
                 </li> <!--best_books_item-->
                 <li class="horror_books_item">
-                    <img class="horror_books_item_img" src="images/novelbook4.jpg">
+                    <img class="horror_books_item_img" src="images/Novels/novelbook4.jpg">
                     <span class="horror_books_item_name">the fox wife</span>
                     <span class="horror_books_item_author">yangsze choo</span>
                     <span class="horror_books_item_price">20.00$</span>
@@ -266,7 +285,7 @@
                     <div class="borrow_book">Borrow</div>
                 </li> <!--horror_books_item-->
                 <li class="horror_books_item">
-                    <img class="horror_books_item_img" src="images/novelbook5.jpg">
+                    <img class="horror_books_item_img" src="images/Novels/novelbook5.jpg">
                     <span class="horror_books_item_name">the fox wife</span>
                     <span class="horror_books_item_author">yangsze choo</span>
                     <span class="horror_books_item_price">20.00$</span>
@@ -274,7 +293,11 @@
                     <div class="borrow_book">Borrow</div>
                 </li> <!--horror_books_item-->
             </ul><!--horror_books list--> 
-            
+            <div class="admin_best_sales admin_horror_sales">
+                <div class="delete_best_sales delete_horror_sales">Delete Book</div>
+                <div class="upload_best_sales upload_horror_sales">Upload Book</div>
+                <div class="edit_best_sales edit_horror_sales">Edit Book</div>
+            </div> 
          <!--horror sectin doneee-->
 
 
@@ -288,7 +311,7 @@
 
             <ul class="investigation_books">
                 <li class="investigation_books_item">
-                    <img class="investigation_books_item_img" src="images/novelbook1.jpg">
+                    <img class="investigation_books_item_img" src="images/Novels/novelbook1.jpg">
                     <span class="investigation_books_item_name">the fox wife</span>
                     <span class="investigation_books_item_author">yangsze choo</span>
                     <span class="investigation_books_item_price">20.00$</span>
@@ -296,7 +319,7 @@
                     <div class="borrow_book">Borrow</div>
                 </li> <!--best_books_item-->
                 <li class="investigation_books_item">
-                    <img class="investigation_books_item_img" src="images/novelbook2.jpg">
+                    <img class="investigation_books_item_img" src="images/Novels/novelbook2.jpg">
                     <span class="investigation_books_item_name">the fox wife</span>
                     <span class="investigation_books_item_author">yangsze choo</span>
                     <span class="investigation_books_item_price">20.00$</span>
@@ -304,7 +327,7 @@
                     <div class="borrow_book">Borrow</div>
                 </li> <!--investigation_books_item-->
                 <li class="investigation_books_item">
-                    <img class="investigation_books_item_img" src="images/novelbook3.jpg">
+                    <img class="investigation_books_item_img" src="images/Novels/novelbook3.jpg">
                     <span class="investigation_books_item_name">the fox wife</span>
                     <span class="investigation_books_item_author">yangsze choo</span>
                     <span class="investigation_books_item_price">20.00$</span>
@@ -312,7 +335,7 @@
                     <div class="borrow_book">Borrow</div>
                 </li> <!--best_books_item-->
                 <li class="investigation_books_item">
-                    <img class="investigation_books_item_img" src="images/novelbook4.jpg">
+                    <img class="investigation_books_item_img" src="images/Novels/novelbook4.jpg">
                     <span class="investigation_books_item_name">the fox wife</span>
                     <span class="investigation_books_item_author">yangsze choo</span>
                     <span class="investigation_books_item_price">20.00$</span>
@@ -320,19 +343,29 @@
                     <div class="borrow_book">Borrow</div>
                 </li> <!--investigation_books_item-->
                 <li class="investigation_books_item">
-                    <img class="investigation_books_item_img" src="images/novelbook5.jpg">
+                    <img class="investigation_books_item_img" src="images/Novels/novelbook5.jpg">
                     <span class="investigation_books_item_name">the fox wife</span>
                     <span class="investigation_books_item_author">yangsze choo</span>
                     <span class="investigation_books_item_price">20.00$</span>
                     <span class="investigation_books_item_id">1001444</span>
                     <div class="borrow_book">Borrow</div>
                 </li> <!--investigation_books_item-->
-            </ul><!--investigation_books list--> 
-            
+            </ul><!--investigation_books list-->
+            <div class="admin_best_sales admin_investigation_sales">
+                <div class="delete_best_sales delete_investigation_sales">Delete Book</div>
+                <div class="upload_best_sales upload_investigation_sales">Upload Book</div>
+                <div class="edit_best_sales edit_investigation_sales">Edit Book</div>
+            </div>  
          <!--investigation sectin doneee-->         
     </main>
     <footer>
-        <p>Copyright © 2024 Chapterfly</p>
+        <div class="footer_content">
+            <p class="footer_left">© 2024 Chapterfly</p>
+            <p class="footer_right">All rights reserved</p>
+        </div>
     </footer>
+    <script src="javascript/cart.js"></script>
+    <script src="javascript/adminORuserNovels.js">
+    </script>
 </body>
 </html>
