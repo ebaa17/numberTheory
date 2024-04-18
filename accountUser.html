@@ -1,58 +1,62 @@
     <!DOCTYPE html>
     <html>
-        <head>
-            <meta charset="utf-8">
-            <link rel="stylesheet"  href="styles/account.css"/>
-            <link rel="stylesheet" href="styles/mainStyle.css" />
-            <link rel="stylesheet" href="styles/all.min.css" />
-            <title>Account</title>
-        </head>
-        <body>
-        <!-- Start Header -->
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet"/>           
+      <link rel="stylesheet"  href="styles/account.css"/>
+      <link rel="stylesheet" href="styles/mainStyle.css" />
+      <link rel="stylesheet" href="styles/all.min.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <title>Account</title>
+    </head>
+    <body>
+            <!-- Start Header -->
     <div class="header" id="header">
-        <div class="container">
-          <a href="main.html" class="logo"><i class="fa-solid fa-book-open icon"></i> Chapterfly</a
-          >
-  
-          <ul class="main-nav">
-            <li><a href="#about">About us</a></li>
-            <li><a href="#how">How it works</a></li>
-            <li><a href="#contact">Contact us</a></li>
-            <li><a href="accountUser.html">Account</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="signup.html">Signup</a></li>
-            <li><a href="cart.html">My cart</a></li>
-            <li>
-              <a href="#discover" class="discover">Discover</a>
-              <!-- Start drop down menu -->
-              <div class="mega-menu">
-                <div class="image">
-                  <img src="images/discoverImage.png" alt=""/>
-                </div>
-  
-                <ul class="links">
-                  <li><a href="programming.html">Programming</a></li>
-                  <li><a href="">Fantasy</a></li>
-                  <li><a href="">Comedy</a></li>
-                  <li><a href="">Biography</a></li>
-                  <li><a href="">Science</a></li>
-                </ul>
-                <ul class="links">
-                  <li><a href="">Historiy</a></li>
-                  <li><a href="">Novels</a></li>
-                  <li><a href="">Adventure</a></li>
-                  <li><a href="">Culture</a></li>
-                  <li><a href="">Mystery</a></li>
-                </ul>
+      <div class="container">
+        <a href="main.html" class="logo"><i class="fa-solid fa-book-open icon"></i> Chapterfly</a
+        >
+
+        <ul class="main-nav">
+          <li><a href="#footer">Contact us</a></li>
+          <li><a href="accountUser.html">Account</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Signup</a></li>
+          <li><a href="cart.html">My cart</a></li>
+          <li>
+            <a href="#discover" class="discover">Discover</a>
+            <!-- Start drop down menu -->
+            <div class="mega-menu">
+              <div class="image">
+                <img src="images/discoverImage.png" alt=""/>
               </div>
-              <!-- end drop down menu -->
-            </li>
-          </ul>
-        </div>
+
+              <ul class="links">
+                <li><a href="user/programmingBooks.html">Programming</a></li>
+                <li><a href="fantsy.html">Fantasy</a></li>
+                <li><a href="comedy.html">Comedy</a></li>
+                <li><a href="">Biography</a></li>
+                <li><a href="">Science</a></li>
+              </ul>
+              <ul class="links">
+                <li><a href="">Historiy</a></li>
+                <li><a href="">Novels</a></li>
+                <li><a href="">Adventure</a></li>
+                <li><a href="">Culture</a></li>
+                <li><a href="">Mystery</a></li>
+              </ul>
+            </div>
+            <!-- end drop down menu -->
+          </li>
+        </ul>
       </div>
-      <!-- End Header -->
+    </div>
+    <!-- End Header -->
         <div id="profileBody" class="container">
             <div id="userProfile" class="container">
+
             <!--profile settings-->   
             <table>
                 <tbody>
@@ -65,9 +69,22 @@
             </table>
             
         </div>
-            <div class="container">
-                <a href=".\user\borrow.html" id="bookshelf">Bookshelf</a>
-            </div>
+        <div id="manageBooks" class="container">
+          <table>
+              <thead>
+                  <th colspan="3"><h2>Manage books</h2></th>
+              </thead>
+              <tr>
+                  <td><button id="addBook">Add new</button></td>
+                  <td><button id="updateBook">Update</button></td>
+                  <td><button id="deleteBook">Delete</button></td>
+              </tr>
+          </table>
+          
+      </div>
+        <div class="container">
+            <a href=".\user\borrow.html" id="bookshelf">Bookshelf</a>
+        </div>
         </div>
         </body>
     </html>
