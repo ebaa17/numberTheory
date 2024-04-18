@@ -70,7 +70,7 @@ search{
 
 /** ----------------------- Programming ----------------------- */
 
-#programming .intro, .conclusion {
+.intro, .conclusion {
     font-style: italic;
     font-size: larger;
     color: #333;
@@ -79,8 +79,7 @@ search{
     margin-bottom: 20px;
     border-radius: 5px;
 }
-
-#programming .book-img{
+.book-img{
     width: 20px;
 }
 
@@ -90,11 +89,11 @@ a[href^="Programming Books/"] {
 }
 
 
-#programming .box {
+.box {
     position: relative;
 }
 
-#programming .add-to-cart {
+.add-to-cart {
     /* position: absolute; */
     display: flex;
     align-items: center;
@@ -108,11 +107,11 @@ a[href^="Programming Books/"] {
     
 }
 
-#programming .box:hover .add-to-cart {
+.box:hover .add-to-cart {
     display: block; /* Show it on hover */
 }
 
-#programming .addToCart-btn{
+.addToCart-btn{
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     visibility: visible;
@@ -139,7 +138,7 @@ a[href^="Programming Books/"] {
     transform: translateY(0px);
 }
 
-#programming .addToCart-btn:hover {
+.addToCart-btn:hover {
     background-color: transparent;
     border: 2px solid #58a3da;
     color: #000;
@@ -148,278 +147,7 @@ a[href^="Programming Books/"] {
 /** ----------------------- Novels ----------------------- */
 
   
-#novels a {
-    text-decoration: none;
-  }
-  #novels ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-#novels .container {
-    padding: 0 15px;
-    margin: 0 auto;
-  }
-  
-     /*  search  */
-  /* .search{
-    width: 100%;
-    height: 60px;
-    background-color: transparent;
-    margin-top: 10px;
-    text-align: center;
-  }
-  .search_input{
-  width:40%;
-  height: 70%;
-  border-radius: 5px;
-  background-color: rgba(239, 239, 239);
-  border: 1px solid rgba(239, 239, 239);
-  font-size:16px;
-  text-align: center;
-  }
-  /*common*/
-  
-  #novels .borrow_book{
-    width:100%;
-    height: 50px;
-    font-size: 20px;
-    text-align: center;
-    color: white;
-    background-color: var(--accent);
-    border-radius: 10px;
-    margin: 20px 0;
-    line-height: 50px;
-  }
-  #novels .borrow_book:hover{
-  background-color: var(--secondary);
-  }
-  #novels .welcome{
-    margin-top: 0px; 
-    text-align: center;
-    width: 100%;
-    height: 100px;
-    background-color: var(--primary);
-    color: var(--bgcolor);
-    line-height: 100px;
-    font-size: 50px;
-    letter-spacing: 7px;
-  }
-  #novels .best_sales{
-    height: 60px;
-    color: var(--primary);
-    text-align: center;
-    line-height: 60px;
-    font-size: 70px;
-    letter-spacing: 5px;
-    font-style: italic;
-    font-family: Garamond Premier Pro;
-    font-family: "Cairo", sans-serif;
-  }
-  #novels .best_books{/*ul*/
-    margin: 30px 50px;
-    display: grid;
-    place-items:center ;
-    justify-content: space-between;
-    grid-template-columns: repeat(5 , 1fr);
-  
-  }
-  #novels .best_books_item{
-     align-items: center;
-  }
-  #novels .best_books_item_img {
-    image: 106px;
-    height: 160px;
-  }
-  #novels .best_books_item_name , .best_books_item_id ,
-  #novels .best_books_item_author , .best_books_item_price{
-    display: block;
-    font-weight:bold;
-    height: 15px;
-    text-align: center;
-    text-transform: uppercase;
-    color: rgb(72, 71, 71);
-  
-  }
-  #novels .overlay{
-    background-color: rgba(0, 0,0,0.7);
-    position:absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-  }
-  #novels .fiction_section{
-    margin: 20px 0;
-    position: relative;
-    background-image: url(../images/fiction.jpg);
-    height: 300px;
-    background-size: cover;
-    background-attachment:fixed ;
-  }
-  #novels .fiction_section h2{
-    color: white;
-    text-align: center;
-    line-height: 200px;
-    font-family: Garamond Premier Pro;
-    font-family: "Cairo", sans-serif;
-    font-style: italic;
-    font-size: 70px;
-  
-  }
-  #novels .fiction_books{/*ul*/
-    margin: 50px 50px;
-    display: grid;
-    place-items:center ;
-    justify-content: space-between;
-    grid-template-columns: repeat(5 , 1fr);
-  
-  }
-  #novels .fiction_books_item{
-     align-items: center;
-  }
-  #novels .fiction_books_item_img {
-    image: 106px;
-    height: 160px;
-  }
-  #novels .fiction_books_item_name , .fiction_books_item_id ,
-  #novels .fiction_books_item_author , .fiction_books_item_price{
-    display: block;
-    font-weight:bold;
-    height: 15px;
-    text-align: center;
-    text-transform: uppercase;
-    color: rgb(72, 71, 71);
-  
-  }
-  #novels .historical_section{
-    margin: 20px 0;
-    position: relative;
-    background-image: url(../images/historical.jpg);
-    height: 300px;
-    background-size: cover;
-    background-attachment:fixed ;
-  }
-  #novels .historical_section h2{
-    color: white;
-    text-align: center;
-    line-height: 200px;
-    font-family: Garamond Premier Pro;
-    font-family: "Cairo", sans-serif;
-    font-style: italic;
-    font-size: 70px;
-  
-  }
-  #novels .historical_books{/*ul*/
-    margin: 50px 50px;
-    display: grid;
-    place-items:center ;
-    justify-content: space-between;
-    grid-template-columns: repeat(5 , 1fr);
-  
-  }
-  #novels .historical_books_item{
-     align-items: center;
-  }
-  #novels .historical_books_item_img {
-    image: 106px;
-    height: 160px;
-  }
-  #novels .historical_books_item_name , .historical_books_item_id ,
-  #novels .historical_books_item_author , .historical_books_item_price{
-    display: block;
-    font-weight:bold;
-    height: 15px;
-    text-align: center;
-    text-transform: uppercase;
-    color: rgb(72, 71, 71);
-  
-  }
-  #novels .horror_section{
-  margin: 20px 0;
-  position: relative;
-  background-image: url(../images/horror.jpg);
-  height: 300px;
-  background-size: cover;
-  background-attachment:fixed ;
-  }
-  #novels .horror_section h2{
-  color: white;
-  text-align: center;
-  line-height: 200px;
-  font-family: Garamond Premier Pro;
-  font-family: "Cairo", sans-serif;
-  font-style: italic;
-  font-size: 70px;
-  
-  }
-  #novels .horror_books{/*ul*/
-  margin: 50px 50px;
-  display: grid;
-  place-items:center ;
-  justify-content: space-between;
-  grid-template-columns: repeat(5 , 1fr);
-  
-  }
-  #novels .horror_books_item{
-   align-items: center;
-  }
-  #novels .horror_books_item_img {
-  image: 106px;
-  height: 160px;
-  }
-  #novels .horror_books_item_name , .horror_books_item_id ,
-  #novels .horror_books_item_author , .horror_books_item_price{
-  display: block;
-  font-weight:bold;
-  height: 15px;
-  text-align: center;
-  text-transform: uppercase;
-  color: rgb(72, 71, 71);
-  
-  }
-  #novels .investigation_section{
-  margin: 20px 0;
-  position: relative;
-  background-image: url(../images/investigation.jpg);
-  height: 300px;
-  background-size: cover;
-  background-attachment:fixed ;
-  }
-  #novels .investigation_section h2{
-  color: white;
-  text-align: center;
-  line-height: 200px;
-  font-family: Garamond Premier Pro;
-  font-family: "Cairo", sans-serif;
-  font-style: italic;
-  font-size: 70px;
-  
-  }
-  #novels .investigation_books{/*ul*/
-  margin: 50px 50px;
-  display: grid;
-  place-items:center ;
-  justify-content: space-between;
-  grid-template-columns: repeat(5 , 1fr);
-  
-  }
-  #novels .investigation_books_item{
-   align-items: center;
-  }
-  #novels .investigation_books_item_img {
-  image: 106px;
-  height: 160px;
-  }
-  #novels .investigation_books_item_name , .investigation_books_item_id ,
-  #novels .investigation_books_item_author , .investigation_books_item_price{
-  display: block;
-  font-weight:bold;
-  height: 15px;
-  text-align: center;
-  text-transform: uppercase;
-  color: rgb(72, 71, 71);
-  
-  }
+
 /** ----------------------- Comedy ----------------------- */
 
 /* header {
@@ -431,112 +159,6 @@ a[href^="Programming Books/"] {
     padding: 100px 0;
     text-align: center;
 } */
-
-#comedy h1 {
-    font-size: 60px;
-    font-style: italic;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-#comedy .book-container {
-    padding: 10px;
-    margin-top: 10px;
-    display: flex;
-    /* flex-wrap: wrap; */
-    /* flex-direction: column-reverse; */
-    justify-content: center;
-}
-
-#comedy .book {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* overflow: auto; */
-    text-align: center;
-    margin: 10px; 
-    flex: 0 1 calc((100% - 300px) / 5); 
-    
-}
-#comedy .book:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
-}
-#comedy .book img {
-    width: 150px;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-#comedy .book h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-#comedy .book p {
-    font-size: 14px;
-    color: #555;
-}
-
-/** ----------------------- Fantasy ----------------------- */
-
-/* header {
-    background-image: url("bac.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    padding: 100px 0;
-    text-align: center;
-} */
-
-#fantasy h1 {
-    font-size: 60px;
-    font-style: italic;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-#fantasy .book-container {
-    padding: 10px;
-    margin-top: 10px;
-    display: flex;
-    /* flex-wrap: wrap; */
-    /* flex-direction: column-reverse; */
-    justify-content: center;
-}
-
-#fantasy .book {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* overflow: auto; */
-    text-align: center;
-    margin: 10px; 
-    flex: 0 1 calc((100% - 300px) / 5); 
-    
-}
-#fantasy .book:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
-}
-#fantasy .book img {
-    width: 150px;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-#fantasy .book h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-#fantasy .book p {
-    font-size: 14px;
-    color: #555;
-}
 
 /** ----------------------- Borrowing ----------------------- */
 
