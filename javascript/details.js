@@ -26,6 +26,7 @@ function uploadBook(id, title, author, category, price, description, isAvailable
 
 // localStorage.removeItem("id1");
 uploadBook("id1", "Harry Potter", "Jk Rowlings","Fantasy", 128 , "Orphan boy discovers magic, attends Hogwarts school, battles evil Lord Voldemort.");
+uploadBook("id2", "The Lord of the rings", "nour eldeen", "Fantasy", 130, "Hobbits join fellowship to destroy One Ring and defeat Dark Lord Sauron.");
 
 // Example: retrieve the book object from local storage (assuming ID is known)
 document.addEventListener("DOMContentLoaded", function () {
