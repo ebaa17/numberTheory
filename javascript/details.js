@@ -20,28 +20,27 @@ function uploadBook(id, title, author, category, price, description, isAvailable
     book.Bcategory = category;
     book.Bprice = price;
     book.Bdescription = description;
-    book.Bavailable = isAvailable
+    book.Bavailable = isAvailable;
     localStorage.setItem(book.Bid.toString(), JSON.stringify(book)); // Convert object to string before storing
 }
 
 // localStorage.removeItem("id1");
 uploadBook("id1", "Harry Potter", "Jk Rowlings","Fantasy", 128 , "Orphan boy discovers magic, attends Hogwarts school, battles evil Lord Voldemort.");
-uploadBook("id2", "The Lord of the rings", "nour eldeen", "Fantasy", 130, "Hobbits join fellowship to destroy One Ring and defeat Dark Lord Sauron.");
 
 // Example: retrieve the book object from local storage (assuming ID is known)
 document.addEventListener("DOMContentLoaded", function () {
     const storedBookId = localStorage.getItem("clickedAnchorId");
-    const retrievedBookString = localStorage.getItem(storedBookId.toString());
+    const retrievedBookString = localStorage.getItem(String.toString(storedBookId));
 
     if (retrievedBookString) {
         const retrievedBook = JSON.parse(retrievedBookString);
 
         const bookTitle = document.getElementById("name"); // Use bookTitle for clarity
         bookTitle.textContent = retrievedBook.Btitle; // Assuming Btitle is the property for title
-        const bookPrice = document.getElementById("price"); 
+        const bookPrice = document.getElementById("price");
         bookPrice.textContent = retrievedBook.Bprice;
-        const bookAuthor = document.getElementById("author"); 
-        bookAuthor.textContent = retrievedBook.Bauthor; 
+        const bookAuthor = document.getElementById("author");
+        bookAuthor.textContent = retrievedBook.Bauthor;
         const bookCategory = document.getElementById("category");
         bookCategory.textContent = retrievedBook.Bcategory;
         const bookDesc = document.getElementById("description");
@@ -52,5 +51,3 @@ document.addEventListener("DOMContentLoaded", function () {
         console.warn("Book with ID", storedBookId, "not found in local storage");
     }
 });
-
-
