@@ -108,9 +108,11 @@ a[href^="Programming Books/"] {
 }
 
 .box:hover .add-to-cart {
-    display: block; /* Show it on hover */
+    display: none; /* Show it on hover if it's admin*/
 }
-
+.box:hover .add-to-cart.active {
+    display: none; /* Show it on hover if it's user*/
+}
 .addToCart-btn{
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -247,14 +249,7 @@ a[href^="Programming Books/"] {
     background-color: #58a3da;
     color: white;
 }
-
-.Buttons{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.edit, .delete{
+.edit, .delete , .borrow{
     width: 50px;
 }
 
@@ -268,8 +263,8 @@ a[href^="Programming Books/"] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    display: none;
 }
-
 .delete:hover{
     background-color: #c60000;
     color: white;
@@ -284,10 +279,28 @@ a[href^="Programming Books/"] {
     border: none;
     border-radius: 4px;
     cursor: pointer; /* Change cursor to pointer on hover */
+    display: none;
 }
 
 .edit:hover{
     background-color: #46d74b;
+}
+.borrow{
+    /* margin-right: 10px;
+    margin-top: 10px; */
+    background-color:var(--accent);
+    color: #fff;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    display: none;
+}
+.borrow:hover{
+    background-color: var(--secondary);
+}
+.delete.active , .edit.active , .borrow.active{
+    display:block ;
 }
 
 
