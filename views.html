@@ -5,13 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet"/>
     <title>Views page</title>
     <link rel="stylesheet" href="styles/views.css" />
-    <script src="javascript/views.js"></script>
+    <link rel="stylesheet" href="styles/mainstyle.css">
   </head>
   <body>
     <div class="header" id="header">
@@ -21,54 +18,184 @@
         >
 
         <ul class="main-nav">
-          <li><a href="#footer">Contact us</a></li>
-          <li><a href="accountUser.html">Account</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="signup.html">Signup</a></li>
-          <li><a href="cart.html">My cart</a></li>
-          <li>
-            <a href="#discover" class="discover">Discover</a>
-            <!-- Start drop down menu -->
-            <div class="mega-menu">
-              <div class="image">
-                <img src="images/discoverImage.png" alt="" />
-              </div>
+            <li><a href="#footer">Contact us</a></li>
+            <li><a href="accountUser.html">Account</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Signup</a></li>
+            <li><a href="cart.html">My cart</a></li>
+            <li>
+                <a href="#discover" class="discover">Discover</a>
+                <!-- Start drop down menu -->
+                <div class="mega-menu">
+                <div class="image">
+                    <img src="images/discoverImage.png" alt="" />
+                </div>
 
-              <ul class="links">
-                <li><a href="user/programmingBooks.html">Programming</a></li>
-                <li><a href="fantsy.html">Fantasy</a></li>
-                <li><a href="comedy.html">Comedy</a></li>
-                <li><a href="">Biography</a></li>
-                <li><a href="">Science</a></li>
-              </ul>
-              <ul class="links">
-                <li><a href="">Historiy</a></li>
-                <li><a href="">Novels</a></li>
-                <li><a href="">Adventure</a></li>
-                <li><a href="">Culture</a></li>
-                <li><a href="">Mystery</a></li>
-              </ul>
+                <ul class="links">
+                    <li><a href="user/programmingBooks.html">Programming</a></li>
+                    <li><a href="fantsy.html">Fantasy</a></li>
+                    <li><a href="comedy.html">Comedy</a></li>
+                    <li><a href="">Biography</a></li>
+                    <li><a href="">Science</a></li>
+                </ul>
+                <ul class="links">
+                    <li><a href="">Historiy</a></li>
+                    <li><a href="">Novels</a></li>
+                    <li><a href="">Adventure</a></li>
+                    <li><a href="">Culture</a></li>
+                    <li><a href="">Mystery</a></li>
+                </ul>
+                </div>
+                <!-- end drop down menu -->
+            </li>
+            </ul>
+        </div>
+    </div>
+    <div id="user" class="hidden">
+        <!-- Search books -->
+        <search>
+            <!-- <form action="" method=""> -->
+            <!-- <label for="searchInput">Search:</label> -->
+            <input type="text" id="searchInput" placeholder="Search by title, author, or category">
+            <button onclick="searchBooks()" class="searchBtn">Search</button>
+            <!-- </form> -->
+        </search>
+        <div class="books">
+            <div class="book">
+              <img src="https://placehold.co/100x300" alt="" />
+              <h3>The Art of Computer Programming</h3>
+              <a href="details.html" id="id1">view details</a>
+              <div class="add-to-cart">
+                <button type="button" class="addToCart-btn" title="Add to cart" id="add-to-cart-button" onclick='addToCart(14, "The Art of Computer Programming", 50, "", "Programming")'>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+                </div>
             </div>
-            <!-- end drop down menu -->
-          </li>
-        </ul>
-      </div>
+            <div class="book">
+              <img src="https://placehold.co/100x300" alt="" />
+              <h3>The Clody Skies</h3>
+              <a href="details.html" id="id2">view details</a>
+              <div class="add-to-cart">
+                <button type="button" class="addToCart-btn" title="Add to cart" id="add-to-cart-button" onclick='addToCart(24, "The Clody Skies", 50, "", "Novels")'>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+                </div>
+            </div>
+          </div>
     </div>
 
-    <div class="books">
-      <div class="book">
-        <img src="https://placehold.co/100x300" alt="" />
-        <h3>Book name</h3>
-        <a href="details.html" id="id1">view details</a>
-        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-      </div>
-      <div class="book">
-        <img src="https://placehold.co/100x300" alt="" />
-        <h3>Book name</h3>
-        <a href="details.html" id="id2">view details</a>
-        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-      </div>
+    <div id="admin" class="hidden">
+        <h2 class="main-title">Available Books</h2>
+        <table id="bookTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Book Name</th>
+                    <th>Author</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- books items will be dynamically added here -->
+                <tr>
+                    <td>1</td>
+                    <td>Clean Code</td>
+                    <td>Robert C. Martin</td>
+                    <td>Programming</td>
+                    <td>A Handbook of Agile Software Craftsmanship</td>
+                    <td class="Buttons">
+                        <button onclick="editBook(1)" class="edit">Edit</button>
+                        <button onclick="deleteBook(1)" class="delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>The Mythical Man-Month</td>
+                    <td>Frederick Brooks</td>
+                    <td>Programming</td>
+                    <td>Delves into software development, project management, and the challenges faced in the field.</td>
+                    <td class="Buttons">
+                        <button onclick="editBook(2)" class="edit">Edit</button>
+                        <button onclick="deleteBook(2)"class="delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>The Pragmatic Programmer</td>
+                    <td>Andrew Hunt and David Thomas</td>
+                    <td>Programming</td>
+                    <td>Offers pragmatic tips to improve your programming and development process.</td>
+                    <td class="Buttons">
+                        <button onclick="editBook(3)" class="edit">Edit</button>
+                        <button onclick="deleteBook(3)"class="delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Code Complete</td>
+                    <td>Steve McConnell</td>
+                    <td>Programming</td>
+                    <td>A Practical Handbook of Software Construction.</td>
+                    <td class="Buttons">
+                        <button onclick="editBook(4)" class="edit">Edit</button>
+                        <button onclick="deleteBook(4)"class="delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>The Art of Computer Programming</td>
+                    <td>Donald Knuth</td>
+                    <td>Programming</td>
+                    <td>It presents programming algorithms and their analysis.</td>
+                    <td class="Buttons">
+                        <button onclick="editBook(5)" class="edit">Edit</button>
+                        <button onclick="deleteBook(5)"class="delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Introduction to Python</td>
+                    <td>John Doe</td>
+                    <td>Programming</td>
+                    <td>A beginner's guide to Python programming.</td>
+                    <td class="Buttons">
+                        <button onclick="editBook(6)" class="edit">Edit</button>
+                        <button onclick="deleteBook(6)"class="delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Design Patterns</td>
+                    <td>Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides</td>
+                    <td>Programming</td>
+                    <td>Introduces fundamental design patterns that enhance code reusability and maintainability.</td>
+                    <td class="Buttons">
+                        <button onclick="editBook(7)" class="edit">Edit</button>
+                        <button onclick="deleteBook(7)"class="delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <!-- Add new book -->
+        <div class="addingBook main-cta">
+            <!-- <h2 class="main-title">Adding Book</h2> -->
+            <div class="container">
+                <div class="name"><i class="fa-solid fa-book-open icon"></i> Adding Book</a></div>
+                <h2>Ready to add a new book to our library?</h>
+                <p>
+                    Join our community and start adding books with ease!
+                </p>
+                <div class="cta-buttons">
+                <a href="add_book.html" class="primary-button">Add New Book</a>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script src="javascript/views.js"></script>
   </body>
 </html>
 
