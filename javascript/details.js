@@ -1,9 +1,4 @@
 let id, title, author, publisher, price;
-id = "id1";
-title = "The Lord of the Rings";
-author = "JK rowlings";
-publisher = "Dar el hanan";
-price = 189;
 
 let book = {
     Bid: id,
@@ -12,25 +7,20 @@ let book = {
     Bpublisher: publisher,
     Bprice: price
 };
-// Store the book details in local storage
-localStorage.setItem(book.Bid.toString(), JSON.stringify(book)); // Convert object to string before storing
-
-id = "id2";
-title = "harry potter";
-author = "nour eldeen";
-publisher = "ay 7aga";
-price = 199;
-
-book.Bid = id;
-book.Btitle = title;
-book.Bauthor = author;
-book.Bpublisher = publisher;
-book.Bprice = price;
-
-localStorage.setItem(book.Bid.toString(), JSON.stringify(book)); // Convert object to string before storing
 
 
+// Updates the values inside the object named book
+// then uploads the book to local storage with key = bookID & value = book object
+function uploadBook(id, title, author, publisher, price) {
+    book.Bid = id;
+    book.Btitle = title;
+    book.Bauthor = author;
+    book.Bpublisher = publisher;
+    book.Bprice = price;
+    localStorage.setItem(book.Bid.toString(), JSON.stringify(book)); // Convert object to string before storing
+}
 
+uploadBook("id4", "algorithms", "nelson", "egypt", 250);
 
 
 
