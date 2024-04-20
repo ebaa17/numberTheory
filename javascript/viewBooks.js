@@ -1,24 +1,13 @@
 function getAllBooksFromLocalStorage() {
+    const storedBooks = localStorage.getItem('infoBooksinStorage');
     let books = [];
-    const prefix = 'id'; // Update with your key prefix
-
-    // if(localStorage.length === 0){
-    //     console.log("fady");
-    // }
-    for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-        if (key.startsWith(prefix)) { // Check if key starts with "id"
-            try {
-                const bookJSON = localStorage.getItem(key);
-                const book = JSON.parse(bookJSON);
-                books.push(book);
-            }
-            catch (error) {
-                console.error('Error parsing stored book:', error);
-            }
-            }
+    if (storedBooks) {
+        try {
+            books = JSON.parse(storedBooks);
+        } catch (error) {
+            console.error('Error parsing stored books:', error);
+        }
     }
-    console.log(books);
     return books;
 }
 
@@ -30,15 +19,15 @@ function addBooksToAdmin(books) {
         const tableRow = document.createElement('tr');
     
         const idCell = document.createElement('td');
-        idCell.textContent = book.Bid;
+        idCell.textContent = book.idofBook;
         tableRow.appendChild(idCell);
     
         const nameCell = document.createElement('td');
-        nameCell.textContent = book.Btitle;
+        nameCell.textContent = book.nameofBook;
         tableRow.appendChild(nameCell);
 
         const authorCell = document.createElement('td');
-        authorCell.textContent = book.Bauthor;
+        authorCell.textContent = book.authorofBook;
         tableRow.appendChild(authorCell);
 
         const categoryCell = document.createElement('td');
@@ -46,7 +35,7 @@ function addBooksToAdmin(books) {
         tableRow.appendChild(categoryCell);
 
         const descriptionCell = document.createElement('td');
-        descriptionCell.textContent = book.Bdescription;
+        descriptionCell.textContent = book.descofBook;
         tableRow.appendChild(descriptionCell);
 
         const BtnsCell = document.createElement('td');
@@ -55,12 +44,12 @@ function addBooksToAdmin(books) {
         const editButton = document.createElement('button');
         editButton.className = "edit";
         editButton.textContent = "Edit";
-        editButton.onclick = function() { editBook(book.Bid); };
+        editButton.onclick = function() { editBook(book.idofBook); };
 
         const deleteButton = document.createElement('button');
         deleteButton.className = "delete";
         deleteButton.textContent = "Delete";
-        deleteButton.onclick = function() { deleteBook(book.Bid); };
+        deleteButton.onclick = function() { deleteBook(book.idofBook); };
 
         BtnsCell.appendChild(editButton);
         BtnsCell.appendChild(deleteButton);
@@ -79,27 +68,32 @@ function addBooksToUser(books){
     books.forEach(book => {
 
     const bookContainer = document.createElement('div');
-    bookContainer.className = "book";
+    bookContainer.className = "book box";
 
     const bookImage = document.createElement('img');
     bookImage.src = "https://placehold.co/200x300";
     bookImage.alt = "Book Image";
+    bookImage.style.width = "600px";
+    bookImage.classList.add("book-img");
     bookContainer.appendChild(bookImage);
 
     const bookContent = document.createElement('div');
     bookContent.className = "content";
 
     const bookTitle = document.createElement('h3');
-    bookTitle.textContent = book.Btitle;
+    bookTitle.textContent = book.nameofBook;
     bookContent.appendChild(bookTitle);
 
     const bookLinks = document.createElement('div');
-    bookLinks.className = "links";
+    bookLinks.className = "links info";
 
     const viewDetailsLink = document.createElement('a');
     viewDetailsLink.href = "details.html";
-    viewDetailsLink.id = `id${book.Bid}`;
-    viewDetailsLink.textContent = "view details";
+    viewDetailsLink.id = `id${book.idofBook}`;
+    viewDetailsLink.textContent = "Read more";
+    const arrowIcon = document.createElement('i');
+    arrowIcon.classList.add('fas', 'fa-long-arrow-alt-right');
+    viewDetailsLink.appendChild(arrowIcon);
     bookLinks.appendChild(viewDetailsLink);
 
     const addToCartContainer = document.createElement('div');
@@ -113,7 +107,7 @@ function addBooksToUser(books){
     addToCartButton.textContent = "Add to cart";
 
     addToCartButton.onclick = function() {
-        addToCart(book.Bid, book.Bname, book.Bprice, "", book.Bcategory);
+        addToCart(book.idofBook, book.nameofBook, book.priceofBook, "", book.Bcategory);
     };
 
     // console.log(addToCartButton);
