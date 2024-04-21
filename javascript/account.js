@@ -80,13 +80,31 @@ displayBorrowedBooks(borrowedBooks);
 
 function getName(){
     // function to get name from log in information
-    const username = localStorage.getItem('username');
+    const username = localStorage.getItem('userName');
     return username;
     //continue
 }
 
-const usernameElement = document.getElementById("username-profile");
-usernameElement.innerText = getName();
+// const usernameElement = document.getElementById("username-profile");
+// usernameElement.innerText = getName();
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Call getPhoto() to load profile picture
+    getPhoto();
+    
+    // Call getName() to get the username
+    const usernameElement = document.getElementById("username-profile");
+    const username = getName();
+    
+    // Check if username is retrieved successfully
+    if (username) {
+        // Set the username in the element
+        usernameElement.innerText = username;
+    } else {
+        // Log an error if username is not retrieved
+        console.error("Username not found in local storage.");
+    }
+});
 
 function logout(){
     localStorage.removeItem( "loggedIn" );
