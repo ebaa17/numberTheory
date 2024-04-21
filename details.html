@@ -15,7 +15,6 @@
     <script src="javascript/details.js"></script>
   </head>
   <body>
-    
     <div class="book">
       <div class="logo"><i class="fa-solid fa-book-open icon"></i> Chapterfly</a></div>
       <h2><span id="name">Harry Potter</span></h2>
@@ -24,8 +23,11 @@
       <p><span class="label">Category</span><span id="category">Fantasy</span></p>
       <p><span class="label">Availability</span><span id="available">Available</span></p>
       <p><span class="desc" id="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, fugiat.</span></p>
-      <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+      <button type="button" class="addToCart-btn" title="Add to cart" id="add-to-cart-button" onclick='addToCart(1, "Clean Code", 50, "images/cLeanCode.jpg", "Programming")'>
+        <i class="fa-solid fa-cart-shopping"></i>
+    </button>
 
+    <script src="javascript/cart.js"></script>
     </div>
   </body>
 </html>
