@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     const storedBookId = localStorage.getItem("clickedAnchorId");
 
@@ -27,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
         bookDesc.textContent = retrievedBook.descofBook;
         const bookAvail = document.getElementById("available");
         bookAvail.textContent = retrievedBook.Bavailable;
+        const Btn = document.getElementById("add-to-cart-button");
+        Btn.onclick = function(){ addToCart(retrievedBook.idofBook, retrievedBook.nameofBook, retrievedBook.priceofBook, "images/cLeanCode.jpg", retrievedBook.Bcategory);}
     } else {
         console.warn("Book with ID", storedBookId, "not found in local storage");
     }
