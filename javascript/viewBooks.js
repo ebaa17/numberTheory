@@ -140,7 +140,8 @@ function addBooksToUser(books){
     // console.log(bookContainer);
 
     addToCartContainer.appendChild(addToCartButton);
-    bookLinks.appendChild(addToCartContainer);
+    // bookLinks.appendChild(addToCartContainer);
+    bookContent.appendChild(addToCartContainer);
 
     bookContent.appendChild(bookLinks);
     bookContainer.appendChild(bookContent);
