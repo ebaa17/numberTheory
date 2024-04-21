@@ -58,8 +58,7 @@ function displayBorrowedBooks(books) {
     borrowedBooksList.innerHTML = '';
     
     if (books.length === 0) {
-        borrowedBooksList.innerHT
-        ML = '<p class="empty">You have no borrowed books.</p>';
+        borrowedBooksList.innerHTML = '<p class="empty">You have no borrowed books.</p>';
         return;
     }
     
@@ -85,6 +84,9 @@ function getName(){
     return username;
     //continue
 }
+
+const usernameElement = document.getElementById("username-profile");
+usernameElement.innerText = getName();
 
 function logout(){
     localStorage.removeItem( "loggedIn" );
