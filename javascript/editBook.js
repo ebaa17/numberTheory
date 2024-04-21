@@ -35,7 +35,6 @@ function bookExists(bookId) {
     return booksInfo.some(book => book.idofBook === bookId);
 }
 
-
 function setDefaults(bookId) {
     // if the local storage isn't empty get all books and put them in that array
     const booksInfo = JSON.parse(localStorage.getItem('infoBooksinStorage')) || [];
@@ -43,17 +42,16 @@ function setDefaults(bookId) {
     const validBook = booksInfo.find(book => book.idofBook === bookId);
 
     if (validBook) {
-        // in the window that will appear after giving a valid id put all the values with the last put ones in the storage
-        document.getElementById("newName").value = book.nameofBook;
-        document.getElementById("newAuthor").value = book.authorofBook;
-        document.getElementById("newPrice").value = book.priceofBook;
-        document.getElementById("newDescription").value = book.descofBook;
-        document.getElementById("newCategory").value = book.Bcategory;
+        // Set the values of the input fields with the found book's information
+        document.getElementById("newName").value = validBook.nameofBook;
+        document.getElementById("newAuthor").value = validBook.authorofBook;
+        document.getElementById("newPrice").value = validBook.priceofBook;
+        document.getElementById("newDescription").value = validBook.descofBook;
+        document.getElementById("newCategory").value = validBook.Bcategory;
     } else {
         console.log("Book not found in local storage.");
-    }
+    }
 }
-
 function saveEditedBook(bookId) {
     // take the values from the window(defaults and inputs) and store them here
     const newName = document.getElementById("newName").value;
