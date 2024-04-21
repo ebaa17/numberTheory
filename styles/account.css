@@ -71,6 +71,7 @@ button , button > a{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin: 1%;
 }
 table{
     justify-self: center;
