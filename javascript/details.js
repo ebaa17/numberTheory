@@ -1,39 +1,19 @@
-// let id, title, author, category, price, description, isAvailable = true;
-
-// let book = {
-//     Bid: id,
-//     Btitle: title,
-//     Bauthor: author,
-//     Bcategory: category,
-//     Bprice: price,
-//     Bdescription: description,
-//     Bavailable: isAvailable
-// };
-
-
-// // Updates the values inside the object named book
-// // then uploads the book to local storage with key = bookID & value = book object
-// function uploadBook(id, title, author, category, price, description, isAvailable = true) {
-//     book.Bid = id;
-//     book.Btitle = title;
-//     book.Bauthor = author;
-//     book.Bcategory = category;
-//     book.Bprice = price;
-//     book.Bdescription = description;
-//     book.Bavailable = isAvailable;
-//     localStorage.setItem(book.Bid.toString(), JSON.stringify(book)); // Convert object to string before storing
-// }
-
-// // localStorage.removeItem("id1");
-// uploadBook("id1", "Harry Potter", "Jk Rowlings","Fantasy", 128 , "Orphan boy discovers magic, attends Hogwarts school, battles evil Lord Voldemort.");
-
-// Example: retrieve the book object from local storage (assuming ID is known)
 document.addEventListener("DOMContentLoaded", function () {
     const storedBookId = localStorage.getItem("clickedAnchorId");
-    const retrievedBookString = localStorage.getItem(String.toString(storedBookId));
 
-    if (retrievedBookString) {
-        const retrievedBook = JSON.parse(retrievedBookString);
+    const bookArrayString = localStorage.getItem("infoBooksinStorage");
+    const bookArray = JSON.parse(bookArrayString) || [];  // Handle potential null value
+
+    let retrievedBook;
+    for (let i = 0; i < bookArray.length; i++) {
+        if (bookArray[i].idofBook === storedBookId) {
+            retrievedBook = bookArray[i];
+            break;
+        }
+    }
+    console.log(retrievedBook);
+
+    if (retrievedBook) {
 
         const bookTitle = document.getElementById("name"); // Use bookTitle for clarity
         bookTitle.textContent = retrievedBook.nameofBook; // Assuming Btitle is the property for title

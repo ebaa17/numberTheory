@@ -104,7 +104,7 @@ function addBooksToUser(books){
 
     const viewDetailsLink = document.createElement('a');
     viewDetailsLink.href = "details.html";
-    viewDetailsLink.id = `id${book.idofBook}`;
+    viewDetailsLink.id = `${book.idofBook}`;
     viewDetailsLink.textContent = "Read more";
     const arrowIcon = document.createElement('i');
     arrowIcon.classList.add('fas', 'fa-long-arrow-alt-right');

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const container = document.querySelector(".books"); // Using querySelector for class
+    const container = document.querySelector("#books"); // Using querySelector for class
 
     if (container) {
         container.addEventListener("click", function (event) {
