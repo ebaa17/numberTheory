@@ -78,26 +78,33 @@ function deleteBookFromStorage(bookId, deleteButton) {
 function addBooksToUser(books){
     
     const booksContainer = document.getElementById('books');
-    booksContainer.innerHTML = ''; // Clear existing content
+    const booksFeatured = document.getElementById('featured');
+    const container = document.getElementById("container1");    
+    booksFeatured.appendChild(container);
+    // booksContainer.innerHTML = ''; // Clear existing content
 
     books.forEach(book => {
 
     const bookContainer = document.createElement('div');
-    bookContainer.className = "book box";
+    bookContainer.classList.add("book","box") ; //  s7
 
     const bookImage = document.createElement('img');
     bookImage.src = "https://placehold.co/200x300";
     bookImage.alt = "Book Image";
     bookImage.style.width = "600px";
     bookImage.classList.add("book-img");
-    bookContainer.appendChild(bookImage);
+    bookContainer.appendChild(bookImage); //  tmam
 
     const bookContent = document.createElement('div');
-    bookContent.className = "content";
+    bookContent.classList.add("content");
 
     const bookTitle = document.createElement('h3');
     bookTitle.textContent = book.nameofBook;
-    bookContent.appendChild(bookTitle);
+    const bookDescription = document.createElement('p');
+    bookDescription.textContent = book.descofBook;
+    bookContent.appendChild(bookTitle); //lesa 
+    bookContent.appendChild(bookDescription); //lesa 
+    bookContainer.appendChild(bookContent);// s7
 
     const bookLinks = document.createElement('div');
     bookLinks.className = "links info";
@@ -109,7 +116,7 @@ function addBooksToUser(books){
     const arrowIcon = document.createElement('i');
     arrowIcon.classList.add('fas', 'fa-long-arrow-alt-right');
     viewDetailsLink.appendChild(arrowIcon);
-    bookLinks.appendChild(viewDetailsLink);
+    bookLinks.appendChild(viewDetailsLink); // l7d hena s7  :)
 
     const addToCartContainer = document.createElement('div');
     addToCartContainer.className = "add-to-cart";
@@ -120,6 +127,7 @@ function addBooksToUser(books){
     addToCartButton.title = "Add to cart";
     addToCartButton.id = `add-to-cart-button`;
     addToCartButton.textContent = "Add to cart";
+
 
     addToCartButton.onclick = function() {
         addToCart(book.idofBook, book.nameofBook, book.priceofBook, "", book.Bcategory);
@@ -138,6 +146,7 @@ function addBooksToUser(books){
     bookContainer.appendChild(bookContent);
 
     booksContainer.appendChild(bookContainer);
+    container.appendChild(bookContainer);
 
     });
     // console.log(booksContainer[0]);
