@@ -43,12 +43,14 @@
               <div id="profileSection">
                   
                     <div id="profilePic">
+                      
                     <img id="profileImg" src="./images/profilePic.jpg" alt="Profile Picture">
+                    
                   </div><td><h2 id="username-profile">Placeholder</h2></td>
             </thead>
                 
             <tfoot>
-            <button id="changePhotoBtn" onclick="changePhoto()">Change Photo</button>
+            <button id="changePhotoBtn" onclick="changePhoto()">Choose image</button>
             
             </tfoot>
 
@@ -56,9 +58,10 @@
           </table>
           </div> 
       </div>
+        <h3 id="manage-book" class="main-title"> Manage books</h3>
       <div class="profileBody">
-      <div id="manageBooks" class="container">
-        <h3 id="manage-book"> Manage books</h3>
+              <div id="manageBooks" class="container">
+
         
       </div>
       
@@ -82,5 +85,12 @@
         
       </div>
       <script src=".\javascript\account.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            getPhoto();
+        });
+        const usernameElement = document.getElementById("username-profile");
+        usernameElement.innerText = getName();
+      </script>
     </body>
 </html>
