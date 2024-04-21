@@ -58,7 +58,7 @@ function addBooksToAdmin(books) {
         };
 
 
-        BtnsCell.appendChild(editButton);
+        // BtnsCell.appendChild(editButton);
         BtnsCell.appendChild(deleteButton);
 
         tableRow.appendChild(BtnsCell);
