@@ -91,7 +91,7 @@ function addBooksToUser(books){
     const bookImage = document.createElement('img');
     bookImage.src = "https://placehold.co/200x300";
     bookImage.alt = "Book Image";
-    bookImage.style.width = "600px";
+    bookImage.style.width = "100%";
     bookImage.classList.add("book-img");
     bookContainer.appendChild(bookImage); //  tmam
 
