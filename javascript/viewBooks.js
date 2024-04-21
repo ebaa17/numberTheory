@@ -46,10 +46,17 @@ function addBooksToAdmin(books) {
         editButton.textContent = "Edit";
         editButton.onclick = function() { editBook(book.idofBook); };
 
+//              delete 
+              
         const deleteButton = document.createElement('button');
         deleteButton.className = "delete";
         deleteButton.textContent = "Delete";
-        deleteButton.onclick = function() { deleteBook(book.idofBook); };
+        deleteButton.onclick = function() {
+            tableRow.parentNode.removeChild(tableRow);
+            deleteBookFromStorage(book.idofBook,deleteButton);
+
+        };
+
 
         BtnsCell.appendChild(editButton);
         BtnsCell.appendChild(deleteButton);
@@ -59,6 +66,14 @@ function addBooksToAdmin(books) {
         tableBody.appendChild(tableRow);
     });
 }
+
+function deleteBookFromStorage(bookId, deleteButton) {
+    const storedBooks = getAllBooksFromLocalStorage();
+    const filteredBooks = storedBooks.filter(book => book.idofBook !== bookId);
+    localStorage.setItem('infoBooksinStorage', JSON.stringify(filteredBooks));
+    deleteButton.parentNode.parentNode.removeChild(deleteButton.parentNode);
+}
+
 
 function addBooksToUser(books){
     
@@ -129,7 +144,31 @@ function addBooksToUser(books){
     return booksContainer;
 }
 
-// export { addBooksToAdmin, addBooksToUser, getAllBooksFromLocalStorage };
+const deleteButton = document.createElement('button');
+deleteButton.className = "delete";
+deleteButton.textContent = "Delete";
+deleteButton.onclick = function() {
+
+  tableRow.parentNode.removeChild(tableRow);
+
+  deleteBookFromStorage(book.idofBook);
+};
+function deleteBookFromStorage(bookId) {
+    const storedBooks = getAllBooksFromLocalStorage();
+    const filteredBooks = storedBooks.filter(book => book.idofBook !== bookId);
+    localStorage.setItem('infoBooksinStorage', JSON.stringify(filteredBooks));
+}
 window.onload = _ => {const books = getAllBooksFromLocalStorage();
-addBooksToAdmin(books);
-addBooksToUser(books);}
+    addBooksToAdmin(books);
+  
+    const updatedBooks = getAllBooksFromLocalStorage();// to update
+    addBooksToAdmin(updatedBooks);
+    addBooksToUser(books)
+};
+    
+
+
+
+
+// export { addBooksToAdmin, addBooksToUser, getAllBooksFromLocalStorage };
+
