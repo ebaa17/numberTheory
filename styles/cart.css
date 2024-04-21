@@ -205,6 +205,10 @@
     
 }
 
+.text-muted {
+    color: #6c757d; /* This is a gray color */
+}
+
 .empty{
     text-align: center;
     padding: 5%;
