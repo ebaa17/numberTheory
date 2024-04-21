@@ -18,47 +18,22 @@
     <title>Chapterfly</title>
   </head>
   <body>
-    <!-- Start Header -->
-    <div class="header" id="header">
-      <div class="container">
-        <a href="main.html" class="logo"><i class="fa-solid fa-book-open icon"></i> Chapterfly</a
-        >
-
-        <ul class="main-nav">
-          <li><a href="#footer">Contact us</a></li>
-          <li><a href="accountUser.html">Account</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="signup.html">Signup</a></li>
-          <li><a href="cart.html">My cart</a></li>
-          <li>
-            <a href="#discover" class="discover">Discover</a>
-            <!-- Start drop down menu -->
-            <div class="mega-menu">
-              <div class="image">
-                <img src="images/discoverImage.png" alt=""/>
-              </div>
-
-              <ul class="links">
-                <li><a href="user/programmingBooks.html">Programming</a></li>
-                <li><a href="fantsy.html">Fantasy</a></li>
-                <li><a href="comedy.html">Comedy</a></li>
-                <li><a href="">Biography</a></li>
-                <li><a href="">Science</a></li>
-              </ul>
-              <ul class="links">
-                <li><a href="">Historiy</a></li>
-                <li><a href="">Novels</a></li>
-                <li><a href="">Adventure</a></li>
-                <li><a href="">Culture</a></li>
-                <li><a href="">Mystery</a></li>
-              </ul>
-            </div>
-            <!-- end drop down menu -->
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- End Header -->
+        <!-- Start Header -->
+        <div class="header" id="header">
+          <div class="container">
+            <a href="main.html" class="logo"><i class="fa-solid fa-book-open icon"></i> Chapterfly</a
+            >
+    
+            <ul class="main-nav">
+              <li><a href="#footer">Contact us</a></li>
+              <li><a href="accountUser.html">Account</a></li>
+              <li><a href="LoginSignup.html">Login / Signup</a></li>
+              <li><a href="cart.html">My cart</a></li>
+              <li><a href="views.html" class="discover">Discover</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- End Header -->
 
     <!--start login signup section-->
 
@@ -70,10 +45,10 @@
                     <span>Enter your information to complete</span>
                     <span>registeration</span>
                     <div class="form_inputs">
-                        <input type="text" placeholder="User Name">
-                        <input type="email" placeholder="E-Mail">
-                        <input type="password" placeholder="Password">
-                        <input type="password" placeholder="Confirm Password">
+                        <input type="text" placeholder="User Name" id="usernameInput">
+                        <input type="email" placeholder="E-Mail" id="emailInput">
+                        <input type="password" placeholder="Password" id="passwordInput">
+                        <input type="password" placeholder="Confirm Password" id="confirmPasswordInput">
                     </div><!--form inputs-->
                     <div id="signupinform">Sign Up</div>
                 </form>
@@ -92,7 +67,6 @@
                         <input type="password" placeholder="Password">
                     </div><!--form input-->
                     <button id="login_btn">Log In</button>
-                    <span class="forget_password"><a href="forget_password.html">Forgot your Password?</a></span>
                 </form>
             </div><!-- end login-->
     
