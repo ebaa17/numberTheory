@@ -30,7 +30,7 @@ function checkBookId() {
 }
 // look for the id in the local storage
 function bookExists(bookId) {
-    return bookId == 1001444;
+    // return bookId == 1001444;
     const booksInfo = JSON.parse(localStorage.getItem('infoBooksinStorage')) || [];
     return booksInfo.some(book => book.idofBook === bookId);
 }
