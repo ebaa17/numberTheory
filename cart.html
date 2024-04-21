@@ -15,7 +15,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet"/>
 
+        <!-- Bootstrap CSS -->
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <!-- <link rel="stylesheet" href="styles/bootstrap.min.css"> -->
+        <!-- <link rel="stylesheet" href="styles/bootstrap.css"> -->
 
         <!-- Style sheet -->
         <link rel="stylesheet" href="styles/mainstyle.css" />
@@ -29,23 +33,23 @@
     </head>
     <body>
         
-        <!-- Start Header -->
-        <div class="header" id="header">
-            <div class="container">
-              <a href="main.html" class="logo"><i class="fa-solid fa-book-open icon"></i> Chapterfly</a
-              >
-      
-              <ul class="main-nav">
-                <li><a href="#footer">Contact us</a></li>
-                <li><a href="accountUser.html">Account</a></li>
-                <li><a href="LoginSignup.html">Login / Signup</a></li>
-                <li><a href="cart.html">My cart</a></li>
-                <li><a href="views.html" class="discover">Discover</a></li>
-              </ul>
-            </div>
-          </div>
-          <!-- End Header -->
-      <!-- End Header -->
+    <div>
+       <!-- Start Header -->
+    <div class="header" id="header">
+        <div class="container">
+          <a href="main.html" class="logo"><i class="fa-solid fa-book-open icon"></i> Chapterfly</a
+          >
+  
+          <ul class="main-nav">
+            <li><a href="#footer">Contact us</a></li>
+            <li><a href="accountUser.html">Account</a></li>
+            <li><a href="LoginSignup.html">Login / Signup</a></li>
+            <li><a href="cart.html">My cart</a></li>
+            <li><a href="views.html" class="discover">Discover</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- End Header -->
         <br>
         <br>
         <div class="main-container container">
@@ -120,13 +124,13 @@
                     <form class="mt-4">
                         <div data-mdb-input-init class="form-outline form-white mb-4">
                         <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
-                            placeholder="Cardholder's Name" />
+                            placeholder="Cardholder's Name" required/>
                         <label class="form-label" for="typeName">Cardholder's Name</label>
                     </div>
     
                     <div data-mdb-input-init class="form-outline form-white mb-4">
                         <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
-                            placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" />
+                            placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" required/>
                         <label class="form-label" for="typeText">Card Number</label>
                     </div>
     
@@ -134,14 +138,14 @@
                         <div class="col-md-6">
                             <div data-mdb-input-init class="form-outline form-white">
                             <input type="text" id="typeExp" class="form-control form-control-lg"
-                                placeholder="MM/YYYY" size="7" id="exp" minlength="7" maxlength="7" />
+                                placeholder="MM/YYYY" size="7" id="exp" minlength="7" maxlength="7" required/>
                             <label class="form-label" for="typeExp">Expiration</label>
                         </div>
                         </div>
                         <div class="col-md-6">
                             <div data-mdb-input-init class="form-outline form-white">
                             <input type="password" id="typeText" class="form-control form-control-lg"
-                                placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
+                                placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" required/>
                             <label class="form-label" for="typeText">Cvv</label>
                         </div>
                         </div>
@@ -153,7 +157,7 @@
     
                     <div class="d-flex justify-content-between mb-4">
                         <p class="mb-2">Total </p>
-                        <p class="mb-2" id="cart_price">$4818.00</p>
+                        <p class="mb-2" id="checkout_price">00.00 LE</p>
                     </div>
     
                     <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-block btn-lg btn-checkout">
