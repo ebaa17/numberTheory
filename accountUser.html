@@ -13,6 +13,7 @@
   <link rel="stylesheet"  href="styles/account.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <title>Account</title>
+
 </head>
 <body>
    <!-- Start Header -->
@@ -47,33 +48,8 @@
             </thead>
                 
             <tfoot>
-            <button id="changePhotoBtn">Change Photo</button>
-            <script> //change photo script
-              const changePhotoBtn = document.getElementById('changePhotoBtn');
-              const profileImg = document.getElementById('profileImg');
-
-              changePhotoBtn.addEventListener('click', function() {
-              const fileInput = document.createElement('input');
-              fileInput.type = 'file';
-              fileInput.accept = 'image/*';
-              fileInput.style.display = 'none';
-
-              fileInput.addEventListener('change', function() {
-                  const file = fileInput.files[0];
-                  const reader = new FileReader();
-
-                  reader.onload = function(event) {
-                  profileImg.src = event.target.result;
-                  };
-
-                  reader.readAsDataURL(file);
-              });
-
-              document.body.appendChild(fileInput);
-              fileInput.click();
-              document.body.removeChild(fileInput);
-});
-            </script>                     
+            <button id="changePhotoBtn" onclick="changePhoto()">Change Photo</button>
+            
             </tfoot>
 
              
@@ -102,16 +78,9 @@
  
       </div>        
       <div class="container" id="bookshelf">
-        <button id="log-out" onclick="logOut()">Log Out</button>
-        <script>
-          // Function to log out the user and redirect
-          function logOut(){
-          localStorage.removeItem("loggedIn");
-          window.location.href='main.html';
-          }
-        </script>
+        <button id="log-out" onclick="logout()">Log Out</button>
+        
       </div>
-        <script src="javascript\account.js"></script>
+      <script src=".\javascript\account.js"></script>
     </body>
 </html>
-
