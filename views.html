@@ -106,7 +106,8 @@
     <script src="javascript/details.js"></script>
     <script src="javascript/viewBooks.js"></script>
     <script src="javascript/views.js"></script>
-    <script src="editBook.js"></script>
+    <script src="javascript/editBook.js"></script>
+    <script src="javascript/cart.js"></script>
     <!-- <script src="javascript/userOradminNovels.js"></script> -->
     </body>
         <!-- Start Footer -->
@@ -143,34 +144,3 @@
         </footer>
         <!-- End Footer -->
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Store Clicked Anchor ID</title>
-  </head>
-  <body>
-    <div id="myContainer">
-      <a href="#" id="link1">Click me - ID: link1</a>
-      <a href="#" id="link2">Click me - ID: link2</a>
-      <a href="details.html" id="link3">Click me - ID: link3</a>
-    </div>
-    <p>Clicked anchor ID: <span id="clickedId"></span></p>
-
-    <script>
-      const container = document.getElementById("myContainer");
-
-      container.addEventListener("click", function (event) {
-        // Check if the clicked element is an anchor tag
-        if (event.target.tagName.toLowerCase() === "a") {
-          //   event.preventDefault(); // Prevent default anchor link behavior
-          const clickedId = event.target.id;
-          localStorage.setItem("clickedAnchorId", clickedId);
-          document.getElementById("clickedId").textContent = clickedId;
-        }
-      });
-    </script>
-  </body>
-</html> -->
