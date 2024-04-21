@@ -89,7 +89,7 @@ function addBooksToUser(books){
     bookContainer.classList.add("book","box") ; //  s7
 
     const bookImage = document.createElement('img');
-    bookImage.src = "https://placehold.co/200x300";
+    bookImage.src = "images/cleanCode.jpg";
     bookImage.alt = "Book Image";
     bookImage.style.width = "100%";
     bookImage.classList.add("book-img");
@@ -103,7 +103,7 @@ function addBooksToUser(books){
     const bookDescription = document.createElement('p');
     bookDescription.textContent = book.descofBook;
     bookContent.appendChild(bookTitle); //lesa 
-    bookContent.appendChild(bookDescription); //lesa 
+    // bookContent.appendChild(bookDescription); //lesa 
     bookContainer.appendChild(bookContent);// s7
 
     const bookLinks = document.createElement('div');
@@ -180,4 +180,3 @@ window.onload = _ => {const books = getAllBooksFromLocalStorage();
 
 
 // export { addBooksToAdmin, addBooksToUser, getAllBooksFromLocalStorage };
-
