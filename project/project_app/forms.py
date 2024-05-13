@@ -19,7 +19,6 @@ class BookForm(forms.ModelForm):
             'status': forms.Select(),
             'price': forms.NumberInput(),
             'id': forms.NumberInput(),
-            'retal_price_day': forms.NumberInput(),
             'img': forms.FileInput(),
             # 'img': forms.FilePathField(),
         }
