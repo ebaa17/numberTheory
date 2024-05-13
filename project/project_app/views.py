@@ -19,7 +19,7 @@ def addBook(request):
 
         add_category = CategoryForm(request.POST)
         if add_category.is_valid():
-            add_book.save()
+            add_category.save()
         
         
     context = {

@@ -3,9 +3,9 @@
 {% load static %}
 
 {% block content %}
-<title>Views page</title>
+<!-- <title>Views page</title>
     <link rel="stylesheet" href="{% static 'styles/editBook.css' %}">
-    <link rel="stylesheet" href="{% static 'styles/views.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/views.css' %}" /> -->
     <div id="user" class="hidden">
         <!-- Search books -->
         <search>
@@ -20,7 +20,7 @@
             <ul class="nav">
                 {% for cat in category|slice:'4' %}
                 <li class="nav-item">
-                    <a href="#">cat.name</a>
+                    <a href="#">{{cat.name}}</a>
                 </li>
                 {% endfor %}
             </ul>
