@@ -40,3 +40,14 @@ def details(request, id):
         'book': bookID
     }
     return render(request, 'pages/details.html', context)
+
+
+def account(request):
+    #get username
+    #get profile picture
+    context = { #will be updated after setting a model for acc data
+        # 'name' : 'default'
+        #'username' : username
+        #'profilepic' : profilepic
+    }
+    return render(request, 'pages/accountUser.html', context)
