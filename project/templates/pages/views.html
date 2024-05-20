@@ -2,19 +2,21 @@
 
 {% load static %}
 
+<link rel="stylesheet" href="{% static 'styles/views.css' %}" />
+
 {% block content %}
 <!-- <title>Views page</title>
     <link rel="stylesheet" href="{% static 'styles/editBook.css' %}">
-    <link rel="stylesheet" href="{% static 'styles/views.css' %}" /> -->
+     -->
     <div id="user" class="hidden">
         <!-- Search books -->
-        <search>
-            <form method="GET" action="{% url 'view' %}">
+        <!-- <search> -->
+            <!-- <form method="GET" action="{% url 'view' %}"> -->
             <!-- <label for="searchInput">Search:</label> -->
             <input type="search" id="searchInput" name="search_name" placeholder="Search by title, author, or category">
             <!-- <button onclick="searchBooks()" class="searchBtn">Search</button> -->
-            </form>
-        </search>
+            <!-- </form> -->
+        <!-- </search> -->
 
         <div class="row">
             <ul class="nav">
@@ -88,8 +90,21 @@
             </thead>
             <tbody>
                 <!-- books items will be dynamically added here -->
-                
+                {% for book in books %}
+                <tr>
+                    <td>{{book.id}}</td>
+                    <td>{{book.name}}</td>
+                    <td>{{book.author}}</td>
+                    <td>{{book.category}}</td>
+                    <td>{{book.description}}</td>
+                    <td class="Buttons">
+                        <!-- <button class="edit" onclick="editBook({{book.id}})">Edit</button> -->
+                        <button class="delete" onclick="deleteBook({{book.id}})">Delete</button>
+                    </td>
+                </tr>
+                {% endfor %}
             </tbody>
+
         </table>
         <button id="edit">Edit book</button>
         <div id="editBookWindow" class="edit-book-window">
@@ -123,7 +138,7 @@
                     Join our community and start adding books with ease!
                 </p>
                 <div class="cta-buttons">
-                <a href="add_book.html" class="primary-button">Add New Book</a>
+                <a href="{% url 'add_book' %}" class="primary-button">Add New Book</a>
                 </div>
             </div>
         </div>

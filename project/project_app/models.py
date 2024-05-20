@@ -28,4 +28,27 @@ class Book(models.Model):
     
     # class Meta:
     #     verbos_name = 'Book'
+    #     verbose_name_plural = 'Books'
     #     ordering = ['name']
+
+
+class Checkout(models.Model):
+    CARD_TYPE_CHOICES = [
+        ('Visa', 'Visa'),
+        ('MasterCard', 'MasterCard'),
+        ('amex', 'amex'),
+        ('payPal', 'payPal')
+    ]
+    cardholder_name = models.CharField(max_length=255)
+    card_number = models.CharField(max_length=19)
+    card_type = models.CharField(max_length=10, choices=CARD_TYPE_CHOICES)
+    expiration_date = models.DateField()
+    cvv = models.CharField(max_length=3)
+
+    def __str__(self):
+        return self.cardholder_name
+    
+    class Meta:
+        verbose_name = 'Checkout'
+        verbose_name_plural = 'Checkouts'
+        ordering = ['cardholder_name']

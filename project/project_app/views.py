@@ -11,16 +11,17 @@ def view(request):
     }
     return render(request, 'pages/views.html', context)
 
-def addBook(request):
+def add_book(request):
     if request.method == 'POST':
-        add_book = BookForm(request.POST, request.FILES) # request.FILES  to save images
-        if add_book.is_valid():
-            add_book.save()
+        if 'add_book' in request.POST:
+            add_book = BookForm(request.POST, request.FILES) # request.FILES  to save images
+            if add_book.is_valid():
+                add_book.save()
 
-        add_category = CategoryForm(request.POST)
-        if add_category.is_valid():
-            add_category.save()
-        
+        elif 'add_category' in request.POST:
+            add_category = CategoryForm(request.POST)
+            if add_category.is_valid():
+                add_category.save()
         
     context = {
         'form': BookForm(),

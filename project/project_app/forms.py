@@ -1,5 +1,5 @@
 from django import forms
-from .models import Book, Category
+from .models import Book, Category, Checkout
 
 class CategoryForm(forms.ModelForm):
     class Meta:
@@ -21,4 +21,16 @@ class BookForm(forms.ModelForm):
             'id': forms.NumberInput(),
             'img': forms.FileInput(),
             # 'img': forms.FilePathField(),
+        }
+
+class CheckoutForm(forms.ModelForm):
+    class Meta:
+        model = Checkout
+        fields = '__all__'
+        widgets = {
+            'cardholder_name': forms.TextInput(),
+            'card_number': forms.TextInput(),
+            'card_type': forms.Select(),
+            'expiration_date': forms.DateInput(),
+            'cvv': forms.TextInput(),
         }

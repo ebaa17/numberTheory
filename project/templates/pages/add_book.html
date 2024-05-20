@@ -33,7 +33,7 @@
         class="description"
       ></textarea> -->
       <br />
-      <button type="submit" class="AddingBookBtn" id="AddingBookBtn">
+      <button type="submit" class="AddingBookBtn" id="AddingBookBtn" name="add_book">
         Add Book
       </button>
     </form>
@@ -43,7 +43,8 @@
       {% csrf_token %}
       
       {{formCategory}}
-      <button type="submit" class="AddingBookBtn">Save</button>
+      <button type="submit" class="AddingBookBtn" name="add_category">
+        Save</button>
     </form>
     <!-- <script src="{% static 'javascript/add_book.js' %}"></script> -->
 {% endblock content %}
