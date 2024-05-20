@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!-- <title>Views page</title>
+    <link rel="stylesheet" href="{% static 'styles/editBook.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/views.css' %}" /> -->
+    <div id="user" class="hidden">
+        <!-- Search books -->
+        <search>
+            <form method="GET" action="{% url 'view' %}">
+            <!-- <label for="searchInput">Search:</label> -->
+            <input type="search" id="searchInput" name="search_name" placeholder="Search by title, author, or category">
+            <!-- <button onclick="searchBooks()" class="searchBtn">Search</button> -->
+            </form>
+        </search>
+
+        <div class="row">
+            <ul class="nav">
+                {% for cat in category|slice:'4' %}
+                <li class="nav-item">
+                    <a href="#">{{cat.name}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="books">
+                <!-- books items will be dynamically added here -->
+                <div class="featured" id="featured">
+                  <div class="container" id="container1">
+                    {% for book in books %}
+                        <div class="book box">
+                            {% if book.img %}
+                                <img src="{{book.img}}" alt="Book Image" class="book-img" sytle="width: 600px"/>
+
+                            {% else %}
+                            <img src="https://placehold.co/200x300" alt="Book Image" class="book-img" sytle="width: 600px"/>
+                            
+                            {% endif %}
+                            <div class="content">
+                                <h3>{{book.name}}</h3>
+                                <div class="status">
+                                    <span>Status: </span>
+                                    {% if book.status == 'available' %}
+                                        <h5 style="color: #198754;">available</h5>
+
+                                    {% elif book.status == 'borrowed' %}
+                                        <h5 style="color: #FFC107;">borrowed</h5>
+
+                                    {% else %}
+                                        <h5 style="color: #DC3545;">sold</h5>
+
+                                    {% endif %}
+
+                                </div>
+                                {% if book.status == 'available' %}
+                                    <div class="add-to-cart">
+                                        <!-- <button class="addToCart-btn" type="button" id="add-to-cart-button" onClick="addToCart({{book.id}}, {{book.name}}, {{book.price}}, {{book.img}}, {{book.category}})">Add to cart</button> -->
+                                    </div>
+                                {% endif %}
+                                <div class="links info">
+                                    <a href="{% url 'details' book.id %}" id="{{book.id}}">Read more<i class='fas fa-long-arrow-alt-right'></i></a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    {% endfor %}
+                    
+                  </div><!--container-->
+                </div><!--featured-->
+        </div>
+    </div>
+    </div>
+
+    <div id="admin" class="hidden">
+        <h2 class="main-title">Available Books</h2>
+        <table id="bookTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Book Name</th>
+                    <th>Author</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- books items will be dynamically added here -->
+                
+            </tbody>
+        </table>
+        <button id="edit">Edit book</button>
+        <div id="editBookWindow" class="edit-book-window">
+            <input id="newName" class="edit-book-input" type="text" placeholder="New Name">
+            <input id="newAuthor" class="edit-book-input" type="text" placeholder="New Author">
+            <input id="newPrice" class="edit-book-input" type="text" placeholder="New Price">
+            <input id="newDescription" class="edit-book-input" type="text" placeholder="New Description">
+            <input id="newCategory" class="edit-book-input" type="text" placeholder="New Category">
+            <button class="edit-book-button" onclick="saveEditedBook()">Save Changes</button>
+        </div>
+        
+       <div id="bookIdinput" class="adminBookIdInput">
+        <div class="modal-content">
+         <span class="close" onclick="closeWindow()">&times;</span>
+          <p>Please enter the book ID:</p>
+          <input id="bookIdInput" type="text">
+          <button onclick="checkBookId()">Submit</button>
+          <p id="errorMessage" class="error-message"></p>
+        </div>
+      </div>
+    
+        
+        <br>
+        <!-- Add new book -->
+        <div class="addingBook main-cta">
+            <!-- <h2 class="main-title">Adding Book</h2> -->
+            <div class="container">
+                <div class="name"><i class="fa-solid fa-book-open icon"></i> Adding Book</a></div>
+                <h2>Ready to add a new book to our library?</h>
+                <p>
+                    Join our community and start adding books with ease!
+                </p>
+                <div class="cta-buttons">
+                <a href="add_book.html" class="primary-button">Add New Book</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="javascript/viewBooks.js"></script>
+    <script src="javascript/views.js"></script>
+    <script src="javascript/editBook.js"></script>
+    <script src="javascript/cart.js"></script>
+    <script src="javascript/adminORuserNovels.js"></script> -->
+
+{% endblock %}
