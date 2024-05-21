@@ -10,13 +10,14 @@
       <p><span class="label">Price</span><span id="price">{{book.price}}</span></p>
       <p><span class="label">Author</span><span id="author">{{book.author}}</span></p>
       <p><span class="label">Category</span><span id="category">{{book.category}}</span></p>
-      <p><span class="label">Availability</span><span id="available">{{book.available}}</span></p>
+      <p><span class="label">Availability</span><span id="available">{{book.status}}</span></p>
       <p><span class="desc" id="description">{{book.description}}</span></p>
-      <!-- <button type="button" class="addToCart-btn" title="Add to cart" id="add-to-cart-button" onclick='addToCart({{book.id}}, {{book.name}}, {{book.price}}, {{book.img}}, {{book.category}})'>
-        <i class="fa-solid fa-cart-shopping"></i>
-    </button> -->
+    {% if book.status == 'available' %}
+    <button type="button" class="addToCart-btn" title="Add to cart" id="add-to-cart-button" onClick="addToCart({{book.id}}, '{{book.name}}', {{book.price}}, {% if book.img %}'{{book.img.url}}'{% else %}'https://placehold.co/200x300'{% endif %}, '{{book.category}}')">
+      <i class="fa-solid fa-cart-shopping"></i>
+  </button>
+    {% endif %}
 
-    <!-- <script src="{% static 'javascript/cart.js' %}"></script>
-    <script src="{% static 'javascript/details.js' %}"></script> -->
+    <script src="{% static 'javascript/cart.js' %}"></script>
     </div>
 {% endblock content %}
