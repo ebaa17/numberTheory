@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="{% static 'styles/editBook.css' %}">
      -->
     <div id="user" class="hidden">
-        <!-- Search books -->
-        <!-- <search> -->
-            <!-- <form method="GET" action="{% url 'view' %}"> -->
-            <!-- <label for="searchInput">Search:</label> -->
-            <input type="search" id="searchInput" name="search_name" placeholder="Search by title, author, or category">
-            <!-- <button onclick="searchBooks()" class="searchBtn">Search</button> -->
-            <!-- </form> -->
-        <!-- </search> -->
+              <!-- SEARCH FORM -->
+      <form method="GET" class="form-inline" action="{% url 'view' %}">
+        <div class="input-group">
+          <input type="search" class="form-control" name="search-name">
+          <div class="input-group-append">
+            <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+      </form>
 
         <div class="row">
             <ul class="nav">
@@ -34,10 +35,10 @@
                     {% for book in books %}
                         <div class="book box">
                             {% if book.img %}
-                                <img src="{{book.img}}" alt="Book Image" class="book-img" sytle="width: 600px"/>
+                                <img src="{{book.img}}" alt="Book Image" class="book-img"/>
 
                             {% else %}
-                            <img src="https://placehold.co/200x300" alt="Book Image" class="book-img" sytle="width: 600px"/>
+                            <img src="https://placehold.co/200x300" alt="Book Image" class="book-img"/>
                             
                             {% endif %}
                             <div class="content">
