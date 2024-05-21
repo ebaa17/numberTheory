@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
 from .models import *
-from .forms import BookForm, CategoryForm
+from .forms import BookForm, CategoryForm, CheckoutForm
 
 # Create your views here.
 
@@ -30,6 +31,13 @@ def add_book(request):
     return render(request, 'pages/add_book.html', context)
 
 def cart(request):
+    if request.method == 'POST':
+        form = CheckoutForm(request.POST)
+        if form.is_valid():
+            # form.save()  # Comment out this line
+            cardholder_name = form.cleaned_data.get('cardholder_name')
+            messages.success(request, f'Thank you, {cardholder_name}!')
+            return redirect('account')  # redirect to the accountUser page
     return render(request, 'pages/cart.html')
 
 def main(request):

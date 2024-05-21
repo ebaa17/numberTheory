@@ -58,7 +58,7 @@
                                 </div>
                                 {% if book.status == 'available' %}
                                     <div class="add-to-cart">
-                                        <!-- <button class="addToCart-btn" type="button" id="add-to-cart-button" onClick="addToCart({{book.id}}, {{book.name}}, {{book.price}}, {{book.img}}, {{book.category}})">Add to cart</button> -->
+                                        <button class="addToCart-btn" type="button" id="add-to-cart-button" onClick="addToCart({{book.id}}, '{{book.name}}', {{book.price}}, {% if book.img %}'{{book.img.url}}'{% else %}'https://placehold.co/200x300'{% endif %}, '{{book.category}}')">Add to cart</button>
                                     </div>
                                 {% endif %}
                                 <div class="links info">
@@ -89,7 +89,7 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- books items will be dynamically added here -->
+                {% comment %} books items will be dynamically added here  {% endcomment %}
                 {% for book in books %}
                 <tr>
                     <td>{{book.id}}</td>
@@ -128,12 +128,11 @@
     
         
         <br>
-        <!-- Add new book -->
+        {% comment %} Add new book {% endcomment %}
         <div class="addingBook main-cta">
-            <!-- <h2 class="main-title">Adding Book</h2> -->
             <div class="container">
                 <div class="name"><i class="fa-solid fa-book-open icon"></i> Adding Book</a></div>
-                <h2>Ready to add a new book to our library?</h>
+                <h2>Ready to add a new book to our library?</h2>
                 <p>
                     Join our community and start adding books with ease!
                 </p>
@@ -144,10 +143,13 @@
         </div>
     </div>
 
-    <!-- <script src="javascript/viewBooks.js"></script>
-    <script src="javascript/views.js"></script>
-    <script src="javascript/editBook.js"></script>
-    <script src="javascript/cart.js"></script>
-    <script src="javascript/adminORuserNovels.js"></script> -->
-
-{% endblock %}
+    <script src="{% static 'javascript/cart.js' %}"></script>
+{% endblock content %}
+{% block extra_scripts %}
+{% comment %}
+<script src="{% static 'javascript/views.js' %}"></script>
+<script src="{% static 'javascript/editBook.js' %}"></script>
+<script src="{% static 'javascript/adminORuserNovels.js' %}"></script>
+<script src="{% static 'javascript/viewBooks.js' %}"></script>
+{% endcomment %}
+{% endblock extra_scripts %}
