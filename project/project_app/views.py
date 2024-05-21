@@ -6,9 +6,19 @@ from .forms import BookForm, CategoryForm, CheckoutForm
 # Create your views here.
 
 def view(request):
+    search = Book.objects.all()
+    title = None
+    if 'search-name' in request.GET:
+        title = request.GET['search-name']
+        if title:
+            search = search.filter(name__icontains=title)
+            # search = Book.objects.filter(name=title)
+        
     context = {
         'category': Category.objects.all(),
-        'books': Book.objects.all(),
+        'books': search,
+        # 'category': Category.objects.all(),
+        # 'books': search,
     }
     return render(request, 'pages/views.html', context)
 
