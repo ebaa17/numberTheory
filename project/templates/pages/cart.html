@@ -3,13 +3,13 @@
 {% load static %}
 
 {% block content %}
-<title>My Cart</title>
 {% comment %}Style sheet {% endcomment %}
 <link rel="stylesheet" href="{% static 'styles/cart.css' %}"/>
 
 <div>
     <br>
     <br>
+
     <div class="main-container container">
         <div class="row cart">
             {% comment %}::before {% endcomment %}
@@ -59,11 +59,8 @@
             {% comment %}</form> {% endcomment %}
             {% comment %}::after {% endcomment %}
         </div>
-    </div>
     {% comment %}::after {% endcomment %}
     {% comment %}checkout {% endcomment %}
-    <form action="" method="POST">
-        {% csrf_token %}
         <div class="checkout">
             <div class="col-lg-5">
 
@@ -82,7 +79,8 @@
                                 class="fab fa-cc-amex fa-2x me-2"></i></a>
                         <a href="#!" type="submit" class="text-white"><i class="fab fa-cc-paypal fa-2x"></i></a>
 
-                        <form class="mt-4">
+                        <form class="mt-4" method="POST" id="checkout-form">
+                            {% csrf_token %}
                             <div data-mdb-input-init class="form-outline form-white mb-4">
 {% comment %}                               <input type="text" id="typeName" class="form-control form-control-lg" size="17"{% endcomment %}
 {% comment %}                                      placeholder="Cardholder's Name" required/>{% endcomment %}
@@ -92,7 +90,7 @@
 
                             <div data-mdb-input-init class="form-outline form-white mb-4">
 {% comment %}                               <input type="text" id="typeTextCardnum" class="form-control form-control-lg" size="17"{% endcomment %}
-{% comment %}                                      placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" required/>{% endcomment %}
+{% comment %}                               placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" required/>{% endcomment %}
                                 {{ form.card_number }}
                                 <label class="form-label" for="typeTextCardnum">Card Number</label>
                             </div>
@@ -118,34 +116,35 @@
                                     </div>
                                 </div>
                             </div>
+                            <hr class="my-4">
 
-                        </form>
-
-                        <hr class="my-4">
-
-                        <div class="d-flex justify-content-between mb-4">
-                            <p class="mb-2">Total </p>
-                            <p class="mb-2" id="checkout_price">00.00 LE</p>
-                        </div>
-
-                        <button type="button" data-mdb-button-init data-mdb-ripple-init
-                                class="btn btn-info btn-block btn-lg btn-checkout">
-                            <div class="d-flex justify-content-between">
-                                <span onclick="checkout()">Checkout <i
-                                        class="fas fa-long-arrow-alt-right ms-2"></i></span>
+                            <div class="d-flex justify-content-between mb-4">
+                                <p class="mb-2">Total </p>
+                                <p class="mb-2" id="checkout_price">00.00 LE</p>
                             </div>
-                        </button>
-
+    
+                            <button type="submit" data-mdb-button-init data-mdb-ripple-init
+                                    class="btn btn-info btn-block btn-lg btn-checkout">
+                                <div class="d-flex justify-content-between">
+                                    <span>Checkout <i
+                                            class="fas fa-long-arrow-alt-right ms-2"></i></span>
+                                </div>
+                            </button>
+                        </form>
                     </div>
                 </div>
 
             </div>
         </div>
-    </form>
+    </div>
 </div>
 <br>
 <script src="{% static 'javascript/cart.js' %}"></script>
 <script>
     window.onload = updateCart();
+    document.getElementById('checkout-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        checkout();
+    });
 </script>
 {% endblock content %}
