@@ -2,22 +2,21 @@
 
 {% load static %}
 
+{% block style %}
 <link rel="stylesheet" href="{% static 'styles/views.css' %}" />
+{% endblock style %}
 
 {% block content %}
-<!-- <title>Views page</title>
-    <link rel="stylesheet" href="{% static 'styles/editBook.css' %}">
-     -->
-    <div id="user" class="hidden">
-              <!-- SEARCH FORM -->
-      <form method="GET" class="form-inline" action="{% url 'view' %}">
-        <div class="input-group">
-          <input type="search" class="form-control" name="search-name">
-          <div class="input-group-append">
-            <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-          </div>
-        </div>
-      </form>
+        <div id="user" class="hidden">
+            <!-- SEARCH FORM -->
+            <form method="GET" class="form-inline" action="{% url 'view' %}">
+                <div class="input-group">
+                <input type="search" class="form-control" name="search-name">
+                <div class="input-group-append">
+                <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                </div>
+            </form>
 
         <div class="row">
             <ul class="nav">
@@ -35,11 +34,11 @@
                     {% for book in books %}
                         <div class="book box">
                             {% if book.img %}
-                                <img src="{{book.img}}" alt="Book Image" class="book-img"/>
+                                <img src="{{book.img}}" alt="Book Image" class="book-img" sytle="width: 600px"/>
 
                             {% else %}
-                            <img src="https://placehold.co/200x300" alt="Book Image" class="book-img"/>
-                            
+                            <img src="https://placehold.co/200x300" alt="Book Image" class="book-img" sytle="width: 600px"/>
+
                             {% endif %}
                             <div class="content">
                                 <h3>{{book.name}}</h3>
@@ -50,9 +49,6 @@
 
                                     {% elif book.status == 'borrowed' %}
                                         <h5 style="color: #FFC107;">borrowed</h5>
-
-                                    {% else %}
-                                        <h5 style="color: #DC3545;">sold</h5>
 
                                     {% endif %}
 
@@ -99,34 +95,45 @@
                     <td>{{book.category}}</td>
                     <td>{{book.description}}</td>
                     <td class="Buttons">
-                        <!-- <button class="edit" onclick="editBook({{book.id}})">Edit</button> -->
-                        <button class="delete" onclick="deleteBook({{book.id}})">Delete</button>
+                        <a href="{% url 'edit_book' book.id %}" 
+                        style=
+                        "background-color: #4caf50; 
+                        margin-top: 20px;
+                        right: 50%;
+                        border: none; 
+                        color: white; 
+                        padding: 5px 15px;
+                        text-align: center; 
+                        text-decoration: none;
+                        display: inline-block; 
+                        font-size: 14px; 
+                        cursor: pointer;
+                        border-radius: 4px;"
+                          >
+                          Edit</a>
+
+                        <a href="{% url 'delete_book' book.id %}" class="delete" 
+                          style=
+                          "background-color: #ef161a; 
+                          margin-top: 20px;
+                          right: 50%;
+                          border: none; 
+                          color: white; 
+                          padding: 5px 5px;
+                          text-align: center; 
+                          text-decoration: none;
+                          display: inline-block; 
+                          font-size: 14px; 
+                          cursor: pointer;
+                          border-radius: 4px;"
+                            >
+                        Delete</a>
                     </td>
                 </tr>
                 {% endfor %}
             </tbody>
 
-        </table>
-        <button id="edit">Edit book</button>
-        <div id="editBookWindow" class="edit-book-window">
-            <input id="newName" class="edit-book-input" type="text" placeholder="New Name">
-            <input id="newAuthor" class="edit-book-input" type="text" placeholder="New Author">
-            <input id="newPrice" class="edit-book-input" type="text" placeholder="New Price">
-            <input id="newDescription" class="edit-book-input" type="text" placeholder="New Description">
-            <input id="newCategory" class="edit-book-input" type="text" placeholder="New Category">
-            <button class="edit-book-button" onclick="saveEditedBook()">Save Changes</button>
-        </div>
-        
-       <div id="bookIdinput" class="adminBookIdInput">
-        <div class="modal-content">
-         <span class="close" onclick="closeWindow()">&times;</span>
-          <p>Please enter the book ID:</p>
-          <input id="bookIdInput" type="text">
-          <button onclick="checkBookId()">Submit</button>
-          <p id="errorMessage" class="error-message"></p>
-        </div>
-      </div>
-    
+        </table>    
         
         <br>
         {% comment %} Add new book {% endcomment %}
@@ -148,9 +155,6 @@
 {% endblock content %}
 {% block extra_scripts %}
 {% comment %}
-<script src="{% static 'javascript/views.js' %}"></script>
-<script src="{% static 'javascript/editBook.js' %}"></script>
 <script src="{% static 'javascript/adminORuserNovels.js' %}"></script>
-<script src="{% static 'javascript/viewBooks.js' %}"></script>
 {% endcomment %}
 {% endblock extra_scripts %}
