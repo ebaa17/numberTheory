@@ -1,7 +1,6 @@
-from django.shortcuts import render, redirect
-from django.contrib import messages
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
-from .forms import BookForm, CategoryForm, CheckoutForm
+from .forms import BookForm, CategoryForm, CheckoutForm, EditBookForm
 
 # Create your views here.
 
@@ -17,10 +16,9 @@ def view(request):
     context = {
         'category': Category.objects.all(),
         'books': search,
-        # 'category': Category.objects.all(),
-        # 'books': search,
     }
     return render(request, 'pages/views.html', context)
+
 
 def add_book(request):
     if request.method == 'POST':
@@ -41,14 +39,17 @@ def add_book(request):
     return render(request, 'pages/add_book.html', context)
 
 def cart(request):
+    valid = False
     if request.method == 'POST':
         form = CheckoutForm(request.POST)
         if form.is_valid():
-            # form.save()  # Comment out this line
-            cardholder_name = form.cleaned_data.get('cardholder_name')
-            messages.success(request, f'Thank you, {cardholder_name}!')
-            return redirect('account')  # redirect to the accountUser page
-    return render(request, 'pages/cart.html')
+            # return redirect('account')
+            valid = True
+    context = {
+        'form': CheckoutForm(),
+        'is_form_valid': valid,
+    }
+    return render(request, 'pages/cart.html', context)
 
 def main(request):
     return render(request, 'pages/main.html')
@@ -70,3 +71,21 @@ def account(request):
         #'profilepic' : profilepic
     }
     return render(request, 'pages/accountUser.html', context)
+
+def edit_book(request, book_id):
+    book = get_object_or_404(Book, id=book_id)
+    if request.method == 'POST':
+        form = EditBookForm(request.POST, instance=book)
+        if form.is_valid():
+            form.save()
+            return redirect('view')  
+    else:
+        form = EditBookForm(instance=book)
+    return render(request, 'pages/edit_book.html', {'form': form})
+
+def delete_book(request, book_id):
+    book = get_object_or_404(Book, id=book_id)
+    if request.method == 'POST':
+        book.delete()
+        return redirect('view')
+    return render(request, 'pages/delete_book.html', {'book': book})
