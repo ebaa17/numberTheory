@@ -185,5 +185,5 @@ function checkout() {
 
     updateCart();
     
-    // alert('Thank you for shopping! Your order has been placed.');
+    alert('Thank you for shopping! Your order has been placed.');
 }
