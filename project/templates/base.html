@@ -22,10 +22,16 @@
     <!-- Style sheets -->
     <link rel="stylesheet" href="{% static 'styles/mainStyle.css' %}" />
     <link rel="stylesheet" href="{% static 'styles/all.min.css' %}" />
+    {% block style  %}
+
+    {% endblock %}
     
     <link rel="icon" href="">
+    
 
-    <title>Chapterfly</title>
+    {% block title %}
+
+    {% endblock %}
   </head>
   <body>
 {% block content %}
