@@ -1,6 +1,8 @@
 # NUMBER THEORY
+___________________________________
+
 ## studying from scratch
-Practicing on 🔗codeforces.com and 🔗vjudge.net
+___________________________________
 
 ## PLAN:
 1. intro
@@ -8,6 +10,8 @@ Practicing on 🔗codeforces.com and 🔗vjudge.net
 3. prime numbers and primality
 4. sieve algorithm
 5. tips and tricks
+
+___________________________________
 
 ## resources:
 🔗 https://codeforces.com/problemset?tags=number%20theory
