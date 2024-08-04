@@ -41,9 +41,20 @@ void factorize(ll n){
     cout<<"\nnumber of factors: "<<factorscount;
 
 }
+
 int multipliers(double n, double l, double r){
     return floor(r/n) - ceil(l/n) + 1;
 }
+
+int trailingZeros(ll n){
+    int cnt = 0;
+    while(n>0){
+        cnt+=n/5;
+        n/=5;
+    }
+    return cnt;
+}
+
 
 int32_t main() {
     fast
@@ -51,5 +62,7 @@ int32_t main() {
     cin>>n;
     factorize(n);
     cout<<"\number of multipliers: "<<multipliers(n,10,100);
+    cout<<"Number of trailing zeros in "<< n <<"! is: "<<trailingZeros(n);
+
     return 0;
 }
